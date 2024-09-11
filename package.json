@@ -1,0 +1,19 @@
+{
+  "name": "kampungbahasa",
+  "private": true,
+  "packageManager": "pnpm@9.10.0",
+  "engines": {
+    "node": ">=22.8.0"
+  },
+  "scripts": {
+    "dev": "turbo watch dev",
+    "build": "turbo run build",
+    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
+    "clean": "git clean -xdf node_modules"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "turbo": "^2.1.1"
+  }
+}
