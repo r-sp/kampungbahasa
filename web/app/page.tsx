@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BaseLayout from "~/layouts/base";
+import Logo from "./logo";
 
 export const metadata: Metadata = {
   title: "Kampung Bahasa",
@@ -8,8 +8,9 @@ export const metadata: Metadata = {
 
 export default function Homepage() {
   return (
-    <BaseLayout>
+    <>
+      <Logo size={32} />
       <h1 className="text-5xl">Homepage</h1>
-    </BaseLayout>
+    </>
   );
 }
