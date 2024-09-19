@@ -10,12 +10,9 @@
     "clean": "git clean -xdf .cache .next .turbo node_modules"
   },
   "dependencies": {
-    "@supabase/ssr": "^0.5.1",
-    "@supabase/supabase-js": "^2.45.4",
     "next": "^14.2.11",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "zod": "^3.23.8"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.10.0",
