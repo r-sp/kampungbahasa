@@ -1,16 +1,18 @@
 interface Props {
-  size: number;
-  variant?: "gradient" | "mono" | "flat";
+  size?: number;
+  variant?: "gradient" | "mono";
 }
 
 export default function Logo({
-  size,
+  size = 32,
   variant = "gradient",
   ...rest
-}: Props & React.ComponentPropsWithoutRef<"div">) {
+}: Props & React.ComponentPropsWithoutRef<"figure">) {
+  const inherit = "currentColor";
   return (
-    <div {...rest}>
+    <figure {...rest}>
       <svg
+        aria-label="Kampung Bahasa Logo"
         width={size}
         height={size}
         viewBox="0 0 32 32"
@@ -28,14 +30,14 @@ export default function Logo({
         )}
         {variant === "mono" && (
           <>
-            <HouseShape color="currentColor" />
-            <BubbleShape color="currentColor" />
-            <DoorShape color="currentColor" />
-            <DiamondShape color="currentColor" />
+            <HouseShape color={inherit} />
+            <BubbleShape color={inherit} />
+            <DoorShape color={inherit} />
+            <DiamondShape color={inherit} />
           </>
         )}
       </svg>
-    </div>
+    </figure>
   );
 }
 

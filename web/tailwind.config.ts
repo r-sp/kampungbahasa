@@ -33,6 +33,10 @@ export default {
           "600": "#CC350F",
         },
       },
+      fontFamily: {
+        inter: ["var(--font-inter)"],
+        roboto: ["var(--font-roboto)"],
+      },
     },
   },
   plugins: [],
