@@ -4,14 +4,14 @@ type IconProps = {
   size?: number;
   color?: string;
   outline?: boolean;
-} & React.ComponentPropsWithoutRef<"svg">;
+};
 
 export function HomeIcon({
   size = 32,
   color = "currentColor",
   outline = true,
   ...rest
-}: IconProps) {
+}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
       width={size}
@@ -34,6 +34,7 @@ export function HomeIcon({
           fill={color}
         />
       )}
+      <title>Home</title>
     </svg>
   );
 }
@@ -68,6 +69,7 @@ export function SearchIcon({
           fill={color}
         />
       )}
+      <title>Search</title>
     </svg>
   );
 }
@@ -106,6 +108,7 @@ export function CourseIcon({
           fill={color}
         />
       )}
+      <title>Course</title>
     </svg>
   );
 }
@@ -138,6 +141,7 @@ export function ActivityIcon({
           fill={color}
         />
       )}
+      <title>Activity</title>
     </svg>
   );
 }
@@ -184,6 +188,7 @@ export function ProfileIcon({
           />
         </>
       )}
+      <title>Profile</title>
     </svg>
   );
 }
