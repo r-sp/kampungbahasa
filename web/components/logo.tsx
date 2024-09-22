@@ -1,45 +1,44 @@
 import React from "react";
 
-interface Props {
+type LogoProps = {
   size?: number;
   variant?: "gradient" | "mono";
-}
+};
 
 export default function Logo({
   size = 32,
   variant = "gradient",
   ...rest
-}: Props & React.ComponentPropsWithoutRef<"figure">) {
+}: LogoProps & React.ComponentPropsWithoutRef<"svg">) {
   const inherit = "currentColor";
   return (
-    <figure {...rest}>
-      <svg
-        aria-label="Kampung Bahasa Logo"
-        width={size}
-        height={size}
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {variant === "gradient" && (
-          <>
-            <HouseShape color="url(#blue-house)" />
-            <BubbleShape color="url(#green-buble)" />
-            <DoorShape color="url(#yellow-door)" />
-            <DiamondShape color="url(#red-diamond)" />
-            <GradientLogo />
-          </>
-        )}
-        {variant === "mono" && (
-          <>
-            <HouseShape color={inherit} />
-            <BubbleShape color={inherit} />
-            <DoorShape color={inherit} />
-            <DiamondShape color={inherit} />
-          </>
-        )}
-      </svg>
-    </figure>
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...rest}
+    >
+      {variant === "gradient" && (
+        <>
+          <HouseShape color="url(#blue-house)" />
+          <BubbleShape color="url(#green-buble)" />
+          <DoorShape color="url(#yellow-door)" />
+          <DiamondShape color="url(#red-diamond)" />
+          <GradientLogo />
+        </>
+      )}
+      {variant === "mono" && (
+        <>
+          <HouseShape color={inherit} />
+          <BubbleShape color={inherit} />
+          <DoorShape color={inherit} />
+          <DiamondShape color={inherit} />
+        </>
+      )}
+      <title>Kampung Bahasa</title>
+    </svg>
   );
 }
 

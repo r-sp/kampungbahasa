@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-ID">
-      <body className={clsx("bg-cn-200", inter.variable, roboto.variable, "font-sans")}>
+      <body className={clsx(inter.variable, roboto.variable)}>
         <main>{children}</main>
         <BottomNav />
       </body>
