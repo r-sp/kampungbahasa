@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Logo from "~/components/logo";
 
 export const metadata: Metadata = {
   title: "Kampung Bahasa",
@@ -8,8 +7,7 @@ export const metadata: Metadata = {
 
 export default function Homepage() {
   return (
-    <article>
-      <Logo />
+    <article className="px-4 py-6">
       <h1 className="text-4xl font-inter font-semibold">Kampung Bahasa</h1>
       <p className="text-xl font-roboto font-normal">
         A place to learn, practice and improve your speaking
