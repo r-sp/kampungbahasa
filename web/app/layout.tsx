@@ -1,7 +1,8 @@
-import { clsx } from "clsx";
+import React from "react";
 import { Inter, Roboto } from "next/font/google";
 import type { Metadata } from "next";
-import { BottomNav } from "~/components/navigation";
+import { clsx } from "clsx";
+import Main from "~/components/main";
 import "./styles.css";
 
 const inter = Inter({
@@ -26,9 +27,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-ID">
-      <body className={clsx(inter.variable, roboto.variable)}>
-        <main>{children}</main>
-        <BottomNav />
+      <body>
+        <Main fonts={clsx(inter.variable, roboto.variable)}>{children}</Main>
       </body>
     </html>
   );

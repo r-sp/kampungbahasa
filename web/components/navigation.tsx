@@ -35,37 +35,44 @@ export function BottomNav() {
 function MainNav() {
   const currentPath = usePathname();
   const style = "inline-flex items-center justify-center h-10 w-16 rounded-xl";
+  const route = {
+    home: "/",
+    search: "/search",
+    course: "/course",
+    activity: "/activity",
+    profile: "/profile",
+  };
   return (
     <>
       <Link
-        href="/"
-        className={clsx(style, currentPath === "/" ? "text-cn-900" : "text-cn-600")}
+        href={route.home}
+        className={clsx(style, currentPath === route.home ? "text-cn-900" : "text-cn-600")}
       >
-        <HomeIcon outline={currentPath === "/" ? true : false} />
+        <HomeIcon outline={currentPath === route.home ? true : false} />
       </Link>
       <Link
-        href="/search"
-        className={clsx(style, currentPath === "/search" ? "text-cn-900" : "text-cn-600")}
+        href={route.search}
+        className={clsx(style, currentPath === route.search ? "text-cn-900" : "text-cn-600")}
       >
-        <SearchIcon outline={currentPath === "/search" ? true : false} />
+        <SearchIcon outline={currentPath === route.search ? true : false} />
       </Link>
       <Link
-        href="/course"
-        className={clsx(style, currentPath === "/course" ? "text-cn-900" : "text-cn-600")}
+        href={route.course}
+        className={clsx(style, currentPath === route.course ? "text-cn-900" : "text-cn-600")}
       >
-        <CourseIcon outline={currentPath === "/course" ? true : false} />
+        <CourseIcon outline={currentPath === route.course ? true : false} />
       </Link>
       <Link
-        href="/activity"
-        className={clsx(style, currentPath === "/activity" ? "text-cn-900" : "text-cn-600")}
+        href={route.activity}
+        className={clsx(style, currentPath === route.activity ? "text-cn-900" : "text-cn-600")}
       >
-        <ActivityIcon outline={currentPath === "/activity" ? true : false} />
+        <ActivityIcon outline={currentPath === route.activity ? true : false} />
       </Link>
       <Link
-        href="/profile"
-        className={clsx(style, currentPath === "/profile" ? "text-cn-900" : "text-cn-600")}
+        href={route.profile}
+        className={clsx(style, currentPath === route.profile ? "text-cn-900" : "text-cn-600")}
       >
-        <ProfileIcon outline={currentPath === "/profile" ? true : false} />
+        <ProfileIcon outline={currentPath === route.profile ? true : false} />
       </Link>
     </>
   );
