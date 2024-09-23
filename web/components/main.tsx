@@ -17,10 +17,10 @@ export default function Main({
 }: { fonts: string; children: React.ReactNode } & React.ComponentPropsWithoutRef<"main">) {
   const [layout, setLayout] = useState("");
   const handleResize = useCallback(() => {
-    if (window.innerWidth <= 768) {
-      setLayout("mobile");
+    if (window.innerWidth <= 767) {
+      if (layout !== "mobile") setLayout("mobile");
     } else {
-      setLayout("desktop");
+      if (layout !== "desktop") setLayout("desktop");
     }
   }, []);
 
@@ -35,7 +35,7 @@ export default function Main({
   return (
     <main className={clsx(fonts, "min-h-screen", "md:pl-16")} {...rest}>
       <Provider value="dekstop">{currentLayout === "desktop" && <RailNav />}</Provider>
-      <Provider value={currentLayout}>{children}</Provider>
+      <>{children}</>
       <Provider value="mobile">{currentLayout === "mobile" && <BottomNav />}</Provider>
     </main>
   );
