@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useEffect, useDeferredValue } from "react";
+import React, { useState, useEffect, useDeferredValue } from "react";
 import { RailNav, BottomNav } from "./navigation";
 import { clsx } from "clsx";
 
@@ -12,13 +12,13 @@ export default function Main({
   children: React.ReactNode;
 }) {
   const [layout, setLayout] = useState("");
-  const handleResize = useCallback(() => {
+  const handleResize = () => {
     if (window.innerWidth <= 767) {
       if (layout !== "mobile") setLayout("mobile");
     } else {
       if (layout !== "desktop") setLayout("desktop");
     }
-  }, []);
+  };
 
   useEffect(() => {
     handleResize();
