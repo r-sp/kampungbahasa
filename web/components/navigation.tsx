@@ -44,36 +44,65 @@ function MainNav() {
   };
   return (
     <>
-      <Link
-        href={route.home}
-        className={clsx(style, currentPath === route.home ? "text-cn-900" : "text-cn-600")}
-      >
-        <HomeIcon outline={currentPath === route.home ? true : false} />
-      </Link>
-      <Link
-        href={route.search}
-        className={clsx(style, currentPath === route.search ? "text-cn-900" : "text-cn-600")}
-      >
-        <SearchIcon outline={currentPath === route.search ? true : false} />
-      </Link>
-      <Link
-        href={route.course}
-        className={clsx(style, currentPath === route.course ? "text-cn-900" : "text-cn-600")}
-      >
-        <CourseIcon outline={currentPath === route.course ? true : false} />
-      </Link>
-      <Link
-        href={route.activity}
-        className={clsx(style, currentPath === route.activity ? "text-cn-900" : "text-cn-600")}
-      >
-        <ActivityIcon outline={currentPath === route.activity ? true : false} />
-      </Link>
-      <Link
-        href={route.profile}
-        className={clsx(style, currentPath === route.profile ? "text-cn-900" : "text-cn-600")}
-      >
-        <ProfileIcon outline={currentPath === route.profile ? true : false} />
-      </Link>
+      <>
+        {currentPath === route.home ? (
+          <Link href={route.home} className={clsx(style, "text-cn-900")} aria-current="page">
+            <HomeIcon outline={true} />
+          </Link>
+        ) : (
+          <Link href={route.home} className={clsx(style, "text-cn-600")}>
+            <HomeIcon outline={false} />
+          </Link>
+        )}
+      </>
+      <>
+        {currentPath === route.search ? (
+          <Link href={route.search} className={clsx(style, "text-cn-900")} aria-current="page">
+            <SearchIcon outline={true} />
+          </Link>
+        ) : (
+          <Link href={route.search} className={clsx(style, "text-cn-600")}>
+            <SearchIcon outline={false} />
+          </Link>
+        )}
+      </>
+      <>
+        {currentPath === route.course ? (
+          <Link href={route.course} className={clsx(style, "text-cn-900")} aria-current="page">
+            <CourseIcon outline={true} />
+          </Link>
+        ) : (
+          <Link href={route.course} className={clsx(style, "text-cn-600")}>
+            <CourseIcon outline={false} />
+          </Link>
+        )}
+      </>
+      <>
+        {currentPath === route.activity ? (
+          <Link
+            href={route.activity}
+            className={clsx(style, "text-cn-900")}
+            aria-current="page"
+          >
+            <ActivityIcon outline={true} />
+          </Link>
+        ) : (
+          <Link href={route.activity} className={clsx(style, "text-cn-600")}>
+            <ActivityIcon outline={false} />
+          </Link>
+        )}
+      </>
+      <>
+        {currentPath === route.profile ? (
+          <Link href={route.profile} className={clsx(style, "text-cn-900")} aria-current="page">
+            <ProfileIcon outline={true} />
+          </Link>
+        ) : (
+          <Link href={route.profile} className={clsx(style, "text-cn-600")}>
+            <ProfileIcon outline={false} />
+          </Link>
+        )}
+      </>
     </>
   );
 }
