@@ -1,21 +1,19 @@
 import React from "react";
 
 type IconProps = {
-  size?: number;
   color?: string;
   outline?: boolean;
 };
 
 export function HomeIcon({
-  size = 32,
+  className = "block w-8 h-8",
   color = "currentColor",
   outline = true,
   ...rest
 }: IconProps & React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
-      width={size}
-      height={size}
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -40,15 +38,14 @@ export function HomeIcon({
 }
 
 export function SearchIcon({
-  size = 32,
+  className = "block w-8 h-8",
   color = "currentColor",
   outline = true,
   ...rest
-}: IconProps) {
+}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
-      width={size}
-      height={size}
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -75,15 +72,14 @@ export function SearchIcon({
 }
 
 export function CourseIcon({
-  size = 32,
+  className = "block w-8 h-8",
   color = "currentColor",
   outline = true,
   ...rest
-}: IconProps) {
+}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
-      width={size}
-      height={size}
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -114,15 +110,14 @@ export function CourseIcon({
 }
 
 export function ActivityIcon({
-  size = 32,
+  className = "block w-8 h-8",
   color = "currentColor",
   outline = true,
   ...rest
-}: IconProps) {
+}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
-      width={size}
-      height={size}
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -147,15 +142,14 @@ export function ActivityIcon({
 }
 
 export function ProfileIcon({
-  size = 32,
+  className = "block w-8 h-8",
   color = "currentColor",
   outline = true,
   ...rest
-}: IconProps) {
+}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
-      width={size}
-      height={size}
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
