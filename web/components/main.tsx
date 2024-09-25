@@ -32,8 +32,11 @@ export default function Main({
       <header></header>
       <>{currentLayout === "desktop" && <RailNav />}</>
       <main id="content">
-        <div className={clsx(fonts, "min-h-screen md:pl-16")} role="none">
-          {children}
+        <div className="min-h-screen md:grid md:align-baseline md:grid-cols-split" role="none">
+          <div className="invisible pointer-events-none w-16" role="none"></div>
+          <div className={clsx("content-auto font-body", fonts, "antialiased")} role="none">
+            {children}
+          </div>
         </div>
       </main>
       <>{currentLayout === "mobile" && <BottomNav />}</>

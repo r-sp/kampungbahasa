@@ -1,17 +1,17 @@
 import React from "react";
-import { Inter, Roboto } from "next/font/google";
+import { Roboto_Flex, Roboto } from "next/font/google";
 import type { Metadata } from "next";
 import { clsx } from "clsx";
 import Main from "~/components/main";
 import "./styles.css";
 
-const inter = Inter({
-  style: "normal",
+const fontDisplay = Roboto_Flex({
+  axes: ["opsz"],
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-flex",
 });
 
-const roboto = Roboto({
+const fontBody = Roboto({
   weight: ["400", "500"],
   subsets: ["latin"],
   variable: "--font-roboto",
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-ID">
       <body>
-        <Main fonts={clsx(inter.variable, roboto.variable)}>{children}</Main>
+        <Main fonts={clsx(fontDisplay.variable, fontBody.variable)}>{children}</Main>
       </body>
     </html>
   );
