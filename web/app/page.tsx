@@ -8,11 +8,8 @@ export const metadata: Metadata = {
 export default function Homepage() {
   return (
     <article className="px-4 py-6">
-      <h1 className="text-4xl font-inter font-semibold">Kampung Bahasa</h1>
-      <p className="text-xl font-roboto font-normal">
-        A place to learn, practice and improve your speaking
-      </p>
-      <button className="text-base">Start learning</button>
+      <h1 className="text-4xl font-display font-semibold tracking-tight">Kampung Bahasa</h1>
+      <p className="text-xl">A place to learn, practice and improve your speaking</p>
     </article>
   );
 }

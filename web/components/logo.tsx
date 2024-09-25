@@ -1,20 +1,18 @@
 import React from "react";
 
 type LogoProps = {
-  size?: number;
   variant?: "gradient" | "mono";
 };
 
 export default function Logo({
-  size = 32,
+  className = "block w-8 h-8",
   variant = "gradient",
   ...rest
 }: LogoProps & React.ComponentPropsWithoutRef<"svg">) {
   const inherit = "currentColor";
   return (
     <svg
-      width={size}
-      height={size}
+      className={className}
       viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
