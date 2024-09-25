@@ -9,15 +9,20 @@ import Logo from "./logo";
 
 export function RailNav() {
   return (
-    <nav className="fixed left-0 bottom-0 top-0 z-40 bg-cn-100 select-none">
-      <div className="flex flex-col items-center justify-between min-h-screen py-6">
-        <Link href="/">
-          <Logo />
-        </Link>
-        <div className="flex flex-col gap-y-4">
-          <MainNav className="inline-flex items-center justify-center h-10 w-16 rounded-xl" />
+    <nav className="fixed left-0 bottom-0 top-0 z-40 select-none">
+      <div className="flex flex-col min-h-screen w-16 smr:bg-cn-100" role="none">
+        <div className="flex items-center justify-center h-16 smr:hidden" role="none">
+          <Link href="/" className="bg-cn-100 p-2 rounded-lg">
+            <Logo />
+          </Link>
         </div>
-        <div></div>
+        <div
+          className="flex flex-auto flex-col items-center justify-center gap-y-2 min-h-full"
+          role="none"
+        >
+          <MainNav className="p-2 rounded-lg" />
+        </div>
+        <div className="min-h-60 smr:hidden"></div>
       </div>
     </nav>
   );
@@ -26,8 +31,8 @@ export function RailNav() {
 export function BottomNav() {
   return (
     <nav className="fixed left-0 bottom-0 right-0 z-40 bg-cn-100 select-none">
-      <div className="flex items-center justify-evenly h-12 mx-auto my-0 max-w-lg">
-        <MainNav className="inline-flex items-center justify-center h-10 w-16 rounded-xl" />
+      <div className="flex items-center justify-evenly h-16 px-4 mx-auto max-w-md" role="none">
+        <MainNav className="p-2 rounded-lg" />
       </div>
     </nav>
   );

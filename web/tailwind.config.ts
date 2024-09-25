@@ -41,6 +41,9 @@ export default {
       gridTemplateColumns: {
         split: "auto 1fr",
       },
+      screens: {
+        smr: { raw: "(max-height: 640px)" },
+      },
       typography: {
         DEFAULT: {
           css: {
