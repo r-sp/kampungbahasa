@@ -34,10 +34,18 @@ export default {
         },
       },
       fontFamily: {
-        inter: ["var(--font-inter)"],
-        roboto: ["var(--font-roboto)"],
+        display: ["var(--font-flex)"],
+        body: ["var(--font-roboto)"],
+      },
+      gridTemplateColumns: {
+        split: "auto 1fr",
       },
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: true,
+    textOpacity: false,
+    backgroundOpacity: false,
+  },
 } satisfies Config;
