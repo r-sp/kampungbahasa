@@ -6,8 +6,8 @@ export const metadata: Metadata = {
 
 export default function CoursePage() {
   return (
-    <article className="px-4 py-6">
-      <h1 className="text-4xl font-display font-semibold">Course</h1>
+    <article className="prose prose-h1:tracking-tight px-4 py-6">
+      <h1>Course</h1>
     </article>
   );
 }

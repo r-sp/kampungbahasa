@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 import { type Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 export default {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -40,9 +41,29 @@ export default {
       gridTemplateColumns: {
         split: "auto 1fr",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              fontWeight: 700,
+              fontFamily: "var(--font-flex)",
+            },
+            h2: {
+              fontWeight: 700,
+              fontFamily: "var(--font-flex)",
+            },
+            p: {
+              fontWeight: 400,
+            },
+            strong: {
+              fontWeight: 500,
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [typography],
   corePlugins: {
     preflight: true,
     textOpacity: false,
