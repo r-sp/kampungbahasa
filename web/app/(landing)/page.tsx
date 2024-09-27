@@ -1,5 +1,6 @@
 import { type Metadata } from "next";
 import { Prose } from "~/components/Prose";
+import TestIcon from "./test-icon";
 
 export const metadata: Metadata = {
   title: "Kampung Bahasa",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <Prose className="px-4 py-6">
+      <TestIcon />
       <h1>A place to learn, practice and improve your speaking</h1>
       <p>
         <strong>Are you seeking to elevate your speaking abilities?</strong> Whether you're
