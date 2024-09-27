@@ -35,8 +35,7 @@ export default {
         },
       },
       fontFamily: {
-        display: ["var(--font-flex)"],
-        body: ["var(--font-roboto)"],
+        flex: ["var(--font-flex)"],
       },
       gridTemplateColumns: {
         split: "auto 1fr",
@@ -49,17 +48,15 @@ export default {
           css: {
             h1: {
               fontWeight: 700,
-              fontFamily: "var(--font-flex)",
             },
             h2: {
               fontWeight: 700,
-              fontFamily: "var(--font-flex)",
             },
             p: {
               fontWeight: 400,
             },
             strong: {
-              fontWeight: 500,
+              fontWeight: 600,
             },
           },
         },

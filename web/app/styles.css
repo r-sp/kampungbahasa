@@ -11,7 +11,7 @@
 }
 
 html {
-  @apply bg-cn-200 text-cn-700;
+  @apply bg-cn-200 text-cn-700 font-flex;
   font-size: 100%;
   text-size-adjust: 100%;
 }
