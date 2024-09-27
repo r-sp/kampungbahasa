@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 import { Prose } from "~/components/Prose";
-import { Logo } from "~/components/logo";
+import Logo from "~/components/logo";
 
 export const metadata: Metadata = {
   title: "Kampung Bahasa",

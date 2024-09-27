@@ -4,7 +4,7 @@ type LogoProps = {
   variant?: "gradient" | "mono";
 };
 
-export function Logo({
+export default function Logo({
   className = "block w-8 h-8",
   variant = "gradient",
   ...rest
