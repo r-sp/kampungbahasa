@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     template: "%s - Kampung Bahasa",
     default: "Kampung Bahasa",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout(
