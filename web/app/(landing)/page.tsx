@@ -1,18 +1,13 @@
 import { type Metadata } from "next";
 import { Prose } from "~/components/Prose";
-import Logo from "~/components/logo";
 
 export const metadata: Metadata = {
-  title: "Kampung Bahasa",
   description: "FKB's proposal to help with its digital transformation",
 };
 
 export default function HomePage() {
   return (
-    <Prose className="px-4 py-6">
-      <div className="mb-4">
-        <Logo />
-      </div>
+    <Prose className="px-4 py-6 mx-auto max-w-screen-lg">
       <h1>A place to learn, practice and improve your speaking</h1>
       <p>
         <strong>Are you seeking to elevate your speaking abilities?</strong> Whether you're

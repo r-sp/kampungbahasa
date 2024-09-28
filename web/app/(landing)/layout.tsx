@@ -1,3 +1,5 @@
+import Header from "~/components/Header";
+
 export default function LandingLayout(
   props: Readonly<{
     children: React.ReactNode;
@@ -5,7 +7,7 @@ export default function LandingLayout(
 ) {
   return (
     <>
-      <header></header>
+      <Header />
       <main>{props.children}</main>
       <footer></footer>
     </>

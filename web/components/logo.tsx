@@ -1,14 +1,12 @@
 import clsx from "clsx";
 
-type LogoProps = {
-  variant?: "gradient" | "mono";
-};
-
 export default function Logo({
   className = "block w-8 h-8",
   variant = "gradient",
   ...rest
-}: LogoProps & React.ComponentPropsWithoutRef<"svg">) {
+}: React.ComponentPropsWithoutRef<"svg"> & {
+  variant?: "gradient" | "mono";
+}) {
   return (
     <svg
       className={className}
