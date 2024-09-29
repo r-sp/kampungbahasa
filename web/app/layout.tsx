@@ -26,7 +26,11 @@ export default function RootLayout(
 ) {
   return (
     <html lang="en-ID" className={fontFlex.variable}>
-      <body>{props.children}</body>
+      <body>
+        <div id="root" role="none">
+          {props.children}
+        </div>
+      </body>
     </html>
   );
 }
