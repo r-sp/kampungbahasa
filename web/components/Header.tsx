@@ -1,11 +1,20 @@
+"use client";
+
+import { useHeaderMotion } from "~/lib/hooks";
+import clsx from "clsx";
 import Link from "next/link";
 import Logo from "./logo";
 
 export default function Header() {
+  const motion = useHeaderMotion({ offset: 32 });
   return (
     <header>
       <div
-        className="bg-pare-200 shadow-1dp fixed left-0 right-0 top-0 z-10 flex items-center gap-3 sm:h-16 sm:px-4"
+        className={clsx(
+          "bg-pare-200",
+          motion ? "shadow-4dp fixed" : "shadow-1dp absolute",
+          "left-0 right-0 top-0 z-10 flex items-center gap-3 sm:h-16 sm:px-4",
+        )}
         role="none"
       >
         <div
