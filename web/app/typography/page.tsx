@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function TypographyPage() {
   return (
     <div className="px-4 py-8">
-      <Prose className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl mx-auto">
+      <Prose className="mx-auto">
         <h1>Typography</h1>
         <p className="lead">
           Until now, trying to style an article, document, or blog post with Tailwind has been a

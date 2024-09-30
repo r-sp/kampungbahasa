@@ -6,14 +6,16 @@ import Link from "next/link";
 import Logo from "./logo";
 
 export default function Header() {
-  const motion = useHeaderMotion({ offset: 32 });
+  const motion = useHeaderMotion();
   return (
     <header>
       <div
         className={clsx(
-          "bg-pare-200",
-          motion ? "shadow-4dp fixed" : "shadow-1dp absolute",
-          "left-0 right-0 top-0 z-10 flex items-center gap-3 sm:h-16 sm:px-4",
+          "navbar",
+          motion === "visible" && "is-visible",
+          motion === "hidden" && "is-hidden",
+          motion === "top" ? "shadow-1dp" : "shadow-4dp",
+          "bg-pare-200 fixed left-0 right-0 top-0 z-10 flex items-center gap-3 sm:h-16 sm:px-4",
         )}
         role="none"
       >
