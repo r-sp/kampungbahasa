@@ -31,6 +31,7 @@
     0 1px 18px 0 var(--shadow-r);
   --shadow-8dp: 0 5px 5px -3px var(--shadow-l), 0 8px 10px 1px var(--shadow-c),
     0 3px 14px 2px var(--shadow-r);
+  --overlay: rgba(0, 0, 0, 0.48);
 }
 
 *,
@@ -131,6 +132,30 @@ img {
   box-shadow: var(--shadow-8dp);
 }
 
+.navbar,
+.drawer > .menu {
+  will-change: transform;
+}
+.drawer.is-close > .menu {
+  transform: translate3d(105vw, 0, 0);
+}
+.drawer.is-open > .menu {
+  box-shadow: var(--shadow-8dp);
+  transform: translate3d(0vw, 0, 0);
+}
+.navbar.is-hidden > .drawer.is-close > .menu {
+  transform: translate3d(105vw, 5rem, 0);
+}
+.drawer > .overlay {
+  background-color: var(--overlay);
+  opacity: 0;
+  pointer-events: none;
+}
+.drawer.is-open > .overlay {
+  opacity: 1;
+  pointer-events: visible;
+}
+
 .toggle-menu path {
   transform-origin: center;
   will-change: transform;
@@ -159,13 +184,18 @@ img {
     transition:
       box-shadow 250ms,
       transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
   }
   .navbar.is-hidden {
     transform: translateY(-5rem);
   }
   .navbar.is-visible {
     transform: translateY(0rem);
+  }
+  .drawer > .menu {
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .drawer > .overlay {
+    transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .toggle-menu path {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);

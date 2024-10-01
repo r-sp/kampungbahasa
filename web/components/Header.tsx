@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useHeaderMotion } from "~/lib/hooks";
 import clsx from "clsx";
 import Link from "next/link";
@@ -7,6 +8,15 @@ import Logo from "./logo";
 
 export default function Header() {
   const motion = useHeaderMotion();
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+    if (drawerOpen) {
+      document.documentElement.removeAttribute("style");
+    } else {
+      document.documentElement.setAttribute("style", "overflow:hidden");
+    }
+  };
   return (
     <header>
       <div
@@ -15,7 +25,8 @@ export default function Header() {
           motion === "visible" && "is-visible",
           motion === "hidden" && "is-hidden",
           motion === "top" ? "shadow-1dp" : "shadow-4dp",
-          "bg-pare-200 fixed left-0 right-0 top-0 z-10 flex items-center gap-3 sm:h-16 sm:px-4",
+          "bg-pare-200 fixed left-0 right-0 top-0 z-10",
+          "flex items-center gap-3 sm:h-16 sm:px-4",
         )}
         role="none"
       >
@@ -30,8 +41,17 @@ export default function Header() {
             </span>
           </Link>
           <div aria-hidden="true" className="sm:hidden sm-r:flex-grow" role="none"></div>
-          <button className="toggle-menu sm:hidden">
+          <button
+            className={clsx(
+              "toggle-menu",
+              drawerOpen ? "is-active" : "",
+              "sm:hidden sm-r:relative sm-r:z-30",
+            )}
+            onClick={toggleDrawer}
+            aria-expanded={drawerOpen ? "true" : "false"}
+          >
             <svg
+              aria-hidden="true"
               className="block w-8 h-8"
               viewBox="0 0 32 32"
               fill="none"
@@ -59,18 +79,34 @@ export default function Header() {
                 fill="currentColor"
               ></path>
             </svg>
+            <span className="sr-only">{drawerOpen ? "Close menu" : "Open menu"}</span>
           </button>
         </div>
-        <div className="sm:contents sm-r:hidden" role="none">
-          <nav className="text-cn-700 sm:contents">
+        <div
+          className={clsx("drawer", drawerOpen ? "is-open" : "is-close", "sm:contents")}
+          role="none"
+        >
+          <nav
+            className={clsx(
+              "menu text-cn-700 sm:contents",
+              "sm-r:bg-pare-100 sm-r:flex sm-r:flex-col sm-r:pt-16",
+              "sm-r:h-screen sm-r:w-full sm-r:max-w-xs sm-r:fixed sm-r:right-0 sm-r:top-0 sm-r:bottom-0 sm-r:z-20",
+            )}
+          >
             <Link href="/course">Course</Link>
             <Link href="/curriculum">Curriculum</Link>
             <Link href="/ecosystem">Ecosystem</Link>
             <Link href="/schedule">Schedule</Link>
           </nav>
+          <div
+            aria-hidden="true"
+            className="overlay sm:hidden sm-r:fixed sm-r:inset-0 sm-r:z-10 sm-r:h-screen"
+            onClick={toggleDrawer}
+            role="none"
+          ></div>
         </div>
       </div>
-      <div className="h-16 pointer-events-none" role="none"></div>
+      <div aria-hidden="true" className="h-16 pointer-events-none" role="none"></div>
     </header>
   );
 }
