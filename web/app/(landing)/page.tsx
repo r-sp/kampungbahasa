@@ -1,5 +1,5 @@
 import { type Metadata } from "next";
-import { Prose } from "~/components/Prose";
+import { Prose } from "~/components/server/Prose";
 
 export const metadata: Metadata = {
   description: "FKB's proposal to help with its digital transformation",
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <Prose className="px-4 py-6 mx-auto max-w-screen-lg">
+    <Prose className="px-4 py-6 max-w-3xl mx-auto">
       <h1>A place to learn, practice and improve your speaking</h1>
       <p>
         <strong>Are you seeking to elevate your speaking abilities?</strong> Whether you're

@@ -1,11 +1,11 @@
 import { type Metadata } from "next";
-import { Roboto_Flex } from "next/font/google";
-import "./styles.css";
+import { Inter } from "next/font/google";
+import "~/styles/tailwind.css";
 
-const fontFlex = Roboto_Flex({
-  axes: ["opsz"],
+const fontInter = Inter({
   subsets: ["latin"],
-  variable: "--font-flex",
+  variable: "--font-inter",
+  weight: "variable",
 });
 
 export const metadata: Metadata = {
@@ -25,12 +25,8 @@ export default function RootLayout(
   }>,
 ) {
   return (
-    <html lang="en-ID" className={fontFlex.variable}>
-      <body>
-        <div id="root" role="none">
-          {props.children}
-        </div>
-      </body>
+    <html lang="en" className={fontInter.variable}>
+      <body>{props.children}</body>
     </html>
   );
 }
