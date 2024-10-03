@@ -91,7 +91,6 @@ export default function Logo({
           </linearGradient>
         </defs>
       )}
-      <title>Kampung Bahasa</title>
     </svg>
   );
 }
