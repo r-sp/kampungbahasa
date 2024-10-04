@@ -6,7 +6,7 @@ type IconProps = {
 };
 
 export function HomeIcon({
-  className = "block w-8 h-8",
+  className,
   color = "currentColor",
   outline = true,
   ...rest
@@ -36,7 +36,7 @@ export function HomeIcon({
 }
 
 export function SearchIcon({
-  className = "block w-8 h-8",
+  className,
   color = "currentColor",
   outline = true,
   ...rest
@@ -66,7 +66,7 @@ export function SearchIcon({
 }
 
 export function CourseIcon({
-  className = "block w-8 h-8",
+  className,
   color = "currentColor",
   outline = true,
   ...rest
@@ -106,7 +106,7 @@ export function CourseIcon({
 }
 
 export function ActivityIcon({
-  className = "block w-8 h-8",
+  className,
   color = "currentColor",
   outline = true,
   ...rest
@@ -136,7 +136,7 @@ export function ActivityIcon({
 }
 
 export function ProfileIcon({
-  className = "block w-8 h-8",
+  className,
   color = "currentColor",
   outline = true,
   ...rest
