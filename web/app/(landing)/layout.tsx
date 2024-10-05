@@ -1,4 +1,4 @@
-import Header from "~/components/client/Header";
+import { Header, Footer } from "~/components/client";
 
 export default function LandingLayout(
   props: Readonly<{
@@ -6,9 +6,10 @@ export default function LandingLayout(
   }>,
 ) {
   return (
-    <div id="root" role="none">
+    <>
       <Header />
       <main>{props.children}</main>
-    </div>
+      <Footer />
+    </>
   );
 }
