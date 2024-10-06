@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "~/assets/Logo";
 
-export default function Header() {
+export default function Header(props: { children?: React.ReactNode }) {
   return (
     <header>
       <nav className="mx-auto flex h-14 max-w-3xl items-center px-4 py-4">
@@ -9,6 +9,7 @@ export default function Header() {
           <Logo className="block h-8 w-8" />
         </Link>
       </nav>
+      {props.children}
     </header>
   );
 }
