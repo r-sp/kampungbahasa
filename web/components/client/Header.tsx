@@ -4,7 +4,7 @@ import { Logo } from "~/assets/Logo";
 export default function Header() {
   return (
     <header>
-      <nav className="flex items-center h-14 mx-auto max-w-3xl ps-4 px-4">
+      <nav className="mx-auto flex h-14 max-w-3xl items-center px-4 ps-4">
         <Link href="/" className="inline-block">
           <Logo className="block h-8 w-8" />
         </Link>
