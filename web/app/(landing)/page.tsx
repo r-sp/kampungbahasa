@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <Prose className="max-w-3xl mx-auto px-4 py-4">
+    <Prose className="mx-auto max-w-3xl px-4 py-4">
       <h1>A place to learn, practice and improve your speaking</h1>
       <p>
         <strong>Are you seeking to elevate your speaking abilities?</strong> Whether you're
