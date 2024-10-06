@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     template: "%s - Kampung Bahasa",
     default: "Kampung Bahasa",
   },
+  description: "FKB's proposal to help with its digital transformation",
   robots: {
     index: true,
     follow: true,
@@ -26,7 +27,9 @@ export default function RootLayout(
 ) {
   return (
     <html lang="en" className={fontInter.variable}>
-      <body>{props.children}</body>
+      <body>
+        <div id="root">{props.children}</div>
+      </body>
     </html>
   );
 }
