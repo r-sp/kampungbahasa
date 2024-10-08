@@ -36,13 +36,6 @@ export default {
           "950": "var(--neutral-950)",
         },
       },
-      boxShadow: {
-        "1dp": "var(--shadow-1dp)",
-        "2dp": "var(--shadow-2dp)",
-        "4dp": "var(--shadow-4dp)",
-        "6dp": "var(--shadow-6dp)",
-        "8dp": "var(--shadow-8dp)",
-      },
       fontFamily: {
         inter: ["var(--font-inter)"],
       },
