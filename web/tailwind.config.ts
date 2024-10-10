@@ -102,5 +102,7 @@ export default {
     boxShadow: false,
     boxShadowColor: false,
     dropShadow: false,
+    invert: false,
+    backdropInvert: false,
   },
 } satisfies Config;
