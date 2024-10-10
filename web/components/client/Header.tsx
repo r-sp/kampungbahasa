@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "~/assets/Logo";
+import { Logo } from "~/assets/logo";
 
 export default function Header(props: { children?: React.ReactNode }) {
   return (

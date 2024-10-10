@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Banner } from "~/assets/Logo";
+import { Banner } from "~/assets/logo";
 
 export default function Footer(props: { children?: React.ReactNode }) {
   return (
