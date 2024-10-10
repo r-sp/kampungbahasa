@@ -135,6 +135,11 @@ img {
   box-shadow: var(--shadow-8dp);
 }
 
+.invert-auto {
+  color: #ffffff;
+  mix-blend-mode: difference;
+}
+
 /** @tailwind base; **/
 @tailwind components;
 @tailwind utilities;
