@@ -37,6 +37,31 @@
   --overlay: rgba(0, 0, 0, 0.48);
 }
 
+.dark {
+  --kb-50: #0074e0;
+  --kb-100: #4ec0ed;
+  --kb-200: #1f9be5;
+  --kb-300: #4ce08a;
+  --kb-400: #00c18f;
+  --kb-500: #008040;
+  --kb-600: #edbc4e;
+  --kb-700: #f79318;
+  --kb-800: #ed4e71;
+  --kb-900: #f44c3c;
+  --kb-950: #cc350f;
+  --neutral-50: #000000;
+  --neutral-100: #121314;
+  --neutral-200: #242526;
+  --neutral-300: #343536;
+  --neutral-400: #545556;
+  --neutral-500: rgba(0, 0, 0, 0.32);
+  --neutral-600: #727374;
+  --neutral-700: #a4a5a6;
+  --neutral-800: #c2c3c4;
+  --neutral-900: #f2f3f4;
+  --neutral-950: #ffffff;
+}
+
 *,
 ::before,
 ::after {
@@ -116,30 +141,32 @@ img {
   display: none;
 }
 
-.shadow-0dp {
-  box-shadow: var(--shadow-0dp);
-}
-.shadow-1dp {
-  box-shadow: var(--shadow-1dp);
-}
-.shadow-2dp {
-  box-shadow: var(--shadow-2dp);
-}
-.shadow-4dp {
-  box-shadow: var(--shadow-4dp);
-}
-.shadow-6dp {
-  box-shadow: var(--shadow-6dp);
-}
-.shadow-8dp {
-  box-shadow: var(--shadow-8dp);
-}
-
-.invert-auto {
-  color: #ffffff;
-  mix-blend-mode: difference;
-}
-
 /** @tailwind base; **/
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .shadow-0dp {
+    box-shadow: var(--shadow-0dp);
+  }
+  .shadow-1dp {
+    box-shadow: var(--shadow-1dp);
+  }
+  .shadow-2dp {
+    box-shadow: var(--shadow-2dp);
+  }
+  .shadow-4dp {
+    box-shadow: var(--shadow-4dp);
+  }
+  .shadow-6dp {
+    box-shadow: var(--shadow-6dp);
+  }
+  .shadow-8dp {
+    box-shadow: var(--shadow-8dp);
+  }
+
+  .invert-auto {
+    color: #ffffff;
+    mix-blend-mode: difference;
+  }
+}

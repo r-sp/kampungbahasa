@@ -1,8 +1,18 @@
+"use client";
+
+import { useState } from "react";
+import clsx from "clsx";
+
 export default function SectionColor() {
+  const [theme, setTheme] = useState<boolean>(false);
+
   return (
     <section aria-labelledby="color">
       <h2 id="color">Color</h2>
-      <div className="flex select-none flex-wrap">
+      <div
+        onClick={() => setTheme(!theme)}
+        className={clsx("flex select-none flex-wrap", theme ? "dark" : "")}
+      >
         <div className="bg-kb-50 inline-flex px-8 py-4">
           <span className="invert-auto">kb-50</span>
         </div>
