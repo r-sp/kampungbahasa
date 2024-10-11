@@ -11,7 +11,7 @@ export default function SectionColor() {
       <h2 id="color">Color</h2>
       <div
         onClick={() => setTheme(!theme)}
-        className={clsx("flex select-none flex-wrap", theme ? "dark" : "")}
+        className={clsx("flex select-none flex-wrap", theme ? "dark" : "light")}
       >
         <div className="bg-kb-50 inline-flex px-8 py-4">
           <span className="invert-auto">kb-50</span>
