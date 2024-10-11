@@ -2,6 +2,8 @@ import { type Metadata } from "next";
 import { Inter } from "next/font/google";
 import "~/styles/tailwind.css";
 
+import { ThemeProvider } from "~/components/client/Theme";
+
 const fontInter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -28,7 +30,9 @@ export default function RootLayout(
   return (
     <html lang="en" className={fontInter.variable}>
       <body>
-        <div id="root">{props.children}</div>
+        <ThemeProvider>
+          <div id="root">{props.children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );
