@@ -1,4 +1,5 @@
-:root {
+:root:not(.dark):not(.light),
+.light:not(.dark) {
   --kb-50: #0074e0;
   --kb-100: #4ec0ed;
   --kb-200: #1f9be5;
@@ -37,7 +38,7 @@
   --overlay: rgba(0, 0, 0, 0.48);
 }
 
-.dark {
+.dark:not(.light) {
   --kb-50: #0074e0;
   --kb-100: #4ec0ed;
   --kb-200: #1f9be5;
