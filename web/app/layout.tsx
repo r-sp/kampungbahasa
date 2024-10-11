@@ -1,11 +1,7 @@
 import { type Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ThemeProvider, ThemeScript } from "~/components/client";
 import "~/styles/tailwind.css";
-
-// test theme
-import { ThemeProvider } from "~/components/client/Theme";
-import { theme } from "~/components/theme";
-import Script from "next/script";
 
 const fontInter = Inter({
   subsets: ["latin"],
@@ -32,17 +28,12 @@ export default function RootLayout(
 ) {
   return (
     <html lang="en" className={fontInter.variable} suppressHydrationWarning>
+      <head>
+        <ThemeScript />
+      </head>
       <body>
         <ThemeProvider>
           <div id="root">{props.children}</div>
-          <Script
-            id="theme"
-            strategy="beforeInteractive"
-            suppressHydrationWarning
-            dangerouslySetInnerHTML={{
-              __html: `(${theme.toString()})()`,
-            }}
-          />
         </ThemeProvider>
       </body>
     </html>
