@@ -13,13 +13,13 @@ export function ThemeProvider(props: { children: React.ReactNode }) {
     const localTheme = getLocalTheme();
     if (localTheme === "dark") {
       setTheme("dark");
-      document.documentElement.classList.add("dark");
+      //document.documentElement.classList.add("dark");
     } else if (localTheme === "light") {
       setTheme("light");
-      document.documentElement.classList.add("light");
+      //document.documentElement.classList.add("light");
     } else {
       setTheme("system");
-      document.documentElement.classList.add("system");
+      //document.documentElement.classList.add("system");
       setSystemTheme();
     }
   }, [theme]);
