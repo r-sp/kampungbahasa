@@ -47,3 +47,74 @@ export function useStickyHeader() {
 
   return sticky;
 }
+
+export function useThemeSwitch(props: {
+  theme: "dark" | "light" | "system";
+  setTheme: React.Dispatch<React.SetStateAction<"dark" | "light" | "system">>;
+}) {
+  const theme = props.theme;
+
+  function cleanTheme(prev: typeof props.theme) {
+    if (document.documentElement.classList.contains(prev))
+      document.documentElement.classList.remove(prev);
+  }
+
+  function applyTheme(next: typeof props.theme) {
+    document.documentElement.classList.add(next);
+  }
+
+  function storeTheme(store: typeof props.theme) {
+    if (typeof window !== "undefined") {
+      try {
+        localStorage.setItem("theme", store);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  }
+
+  function setThemeSystem() {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function applyColorScheme() {
+      if (media.matches) {
+        cleanTheme("light");
+        applyTheme("dark");
+      } else {
+        cleanTheme("dark");
+        applyTheme("light");
+      }
+    }
+
+    media.addEventListener("change", applyColorScheme);
+    applyColorScheme();
+    storeTheme("system");
+    props.setTheme("system");
+  }
+
+  function setThemeDark() {
+    cleanTheme("light");
+    applyTheme("dark");
+    storeTheme("dark");
+    props.setTheme("dark");
+  }
+
+  function setThemeLight() {
+    cleanTheme("dark");
+    applyTheme("light");
+    storeTheme("light");
+    props.setTheme("light");
+  }
+
+  function useTheme(variant: typeof props.theme) {
+    if (variant === "dark") {
+      setThemeDark();
+    } else if (variant === "light") {
+      setThemeLight();
+    } else {
+      setThemeSystem();
+    }
+  }
+
+  return { theme, useTheme };
+}
