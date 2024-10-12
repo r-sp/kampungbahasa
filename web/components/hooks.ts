@@ -73,7 +73,7 @@ export function useThemeSwitch(props: {
     }
   }
 
-  function applyColorScheme(event: MediaQueryList | MediaQueryListEvent) {
+  function useThemeSystem(event: MediaQueryList | MediaQueryListEvent) {
     if (event.matches) {
       cleanTheme("light");
       applyTheme("dark");
@@ -84,16 +84,12 @@ export function useThemeSwitch(props: {
   }
 
   function setThemeSystem() {
-    storeTheme("system");
-    props.setTheme("system");
-
     if (typeof window !== "undefined") {
       const media = window.matchMedia("(prefers-color-scheme: dark)");
-      applyColorScheme(media);
-
-      media.addEventListener("change", applyColorScheme);
-      media.removeEventListener("change", applyColorScheme);
+      useThemeSystem(media);
     }
+    storeTheme("system");
+    props.setTheme("system");
   }
 
   function setThemeDark() {
@@ -119,6 +115,25 @@ export function useThemeSwitch(props: {
       setThemeSystem();
     }
   }
+
+  function localTheme(event: MediaQueryListEvent) {
+    if (typeof window !== "undefined") {
+      try {
+        const local = localStorage.getItem("theme");
+        if (local === "system") useThemeSystem(event);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  }
+
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    media.addEventListener("change", localTheme);
+    return () => {
+      media.removeEventListener("change", localTheme);
+    };
+  });
 
   return { theme, useTheme };
 }
