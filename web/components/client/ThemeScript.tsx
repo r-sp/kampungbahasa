@@ -12,7 +12,6 @@ export default function ThemeScript() {
 }
 
 function theme() {
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
   const html = document.documentElement;
 
   function cleanTheme(theme: string) {
@@ -39,7 +38,7 @@ function theme() {
     } else if (theme === "light") {
       lightMode();
     } else {
-      if (media.matches) {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         darkMode();
       } else {
         lightMode();
@@ -51,14 +50,6 @@ function theme() {
   try {
     const localTheme = localStorage.getItem("theme") || undefined;
     switchTheme(localTheme);
-
-    media.addEventListener("change", (event) => {
-      if (event.matches) {
-        darkMode();
-      } else {
-        lightMode();
-      }
-    });
   } catch (e) {
     console.error(e);
   }
