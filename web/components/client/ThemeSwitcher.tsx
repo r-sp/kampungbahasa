@@ -10,16 +10,65 @@ export default function ThemeSwitcher() {
   const { theme, useTheme } = useThemeSwitch(context);
 
   return (
-    <div className="flex h-8 items-center gap-x-2" data-theme={theme}>
-      <button className="text-neutral-950" onClick={() => useTheme("system")}>
-        <IconThemeContrast className="block size-6" />
-      </button>
-      <button className="text-neutral-950" onClick={() => useTheme("dark")}>
-        <IconThemeDark className="block size-6" />
-      </button>
-      <button className="text-neutral-950" onClick={() => useTheme("light")}>
-        <IconThemeLight className="block size-6" />
-      </button>
-    </div>
+    <fieldset data-theme={theme} className="flex gap-1">
+      <legend className="sr-only">Select a display theme:</legend>
+      <span className="inline-flex">
+        <input
+          aria-label="system"
+          aria-checked={theme === "system" ? true : false}
+          id="theme-system"
+          name="theme"
+          type="radio"
+          value="system"
+          onChange={() => useTheme("system")}
+          className="sr-only"
+        />
+        <label
+          htmlFor="theme-system"
+          className={theme === "system" ? "text-neutral-900" : "text-neutral-400"}
+        >
+          <span className="sr-only">OS Default</span>
+          <IconThemeContrast aria-hidden="true" className="block size-6" />
+        </label>
+      </span>
+      <span className="inline-flex">
+        <input
+          aria-label="light"
+          aria-checked={theme === "light" ? true : false}
+          id="theme-light"
+          name="theme"
+          type="radio"
+          value="light"
+          onChange={() => useTheme("light")}
+          className="sr-only"
+        />
+        <label
+          htmlFor="theme-light"
+          className={theme === "light" ? "text-neutral-900" : "text-neutral-400"}
+        >
+          <span className="sr-only">Light</span>
+          <IconThemeLight aria-hidden="true" className="block size-6" />
+        </label>
+      </span>
+      <span className="inline-flex">
+        <input
+          aria-label="dark"
+          aria-checked={theme === "dark" ? true : false}
+          id="theme-dark"
+          name="theme"
+          type="radio"
+          value="dark"
+          onChange={() => useTheme("dark")}
+          className="sr-only"
+        />
+        <label
+          htmlFor="theme-dark"
+          className={theme === "dark" ? "text-neutral-900" : "text-neutral-400"}
+        >
+          <span className="sr-only">Dark</span>
+          <IconThemeDark aria-hidden="true" className="block size-6" />
+        </label>
+      </span>
+    </fieldset>
   );
 }
