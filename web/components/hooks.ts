@@ -73,23 +73,27 @@ export function useThemeSwitch(props: {
     }
   }
 
-  function setThemeSystem() {
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
-
-    function applyColorScheme() {
-      if (media.matches) {
-        cleanTheme("light");
-        applyTheme("dark");
-      } else {
-        cleanTheme("dark");
-        applyTheme("light");
-      }
+  function applyColorScheme(event: MediaQueryList | MediaQueryListEvent) {
+    if (event.matches) {
+      cleanTheme("light");
+      applyTheme("dark");
+    } else {
+      cleanTheme("dark");
+      applyTheme("light");
     }
+  }
 
-    media.addEventListener("change", applyColorScheme);
-    applyColorScheme();
+  function setThemeSystem() {
     storeTheme("system");
     props.setTheme("system");
+
+    if (typeof window !== "undefined") {
+      const media = window.matchMedia("(prefers-color-scheme: dark)");
+      applyColorScheme(media);
+
+      media.addEventListener("change", applyColorScheme);
+      media.removeEventListener("change", applyColorScheme);
+    }
   }
 
   function setThemeDark() {
