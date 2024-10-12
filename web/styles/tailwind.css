@@ -127,7 +127,8 @@ hr,
 blockquote {
   border-style: solid;
 }
-button {
+button,
+label {
   cursor: pointer;
 }
 img {
