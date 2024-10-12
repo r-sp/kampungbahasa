@@ -116,22 +116,41 @@ export function useThemeSwitch(props: {
     }
   }
 
-  function localTheme(event: MediaQueryListEvent) {
+  function getLocalTheme() {
+    let local;
     if (typeof window !== "undefined") {
       try {
-        const local = localStorage.getItem("theme");
-        if (local === "system") useThemeSystem(event);
+        local = localStorage.getItem("theme");
       } catch (e) {
         console.error(e);
       }
     }
+    return local;
+  }
+
+  function setLocalTheme(event: MediaQueryListEvent) {
+    const local = getLocalTheme();
+    if (local === "system") {
+      useThemeSystem(event);
+    }
+    return event;
   }
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
-    media.addEventListener("change", localTheme);
+    const local = getLocalTheme();
+
+    if (local === "dark") {
+      props.setTheme("dark");
+    } else if (local === "light") {
+      props.setTheme("light");
+    } else {
+      props.setTheme("system");
+    }
+
+    media.addEventListener("change", setLocalTheme);
     return () => {
-      media.removeEventListener("change", localTheme);
+      media.removeEventListener("change", setLocalTheme);
     };
   });
 
