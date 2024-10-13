@@ -16,18 +16,19 @@ export default function SectionIconOutline() {
   const [chevronIcon, setChevronIcon] = useState<boolean>(true);
 
   const buttonStyles = "inline-flex items-center justify-center";
-  const buttonActive = "text-neutral-800";
-  const buttonDisable = "text-neutral-600";
+  const buttonActive = "text-slate-900";
+  const buttonDisable = "text-slate-600";
   const iconStyles = "inline-flex h-8 w-8";
 
-  const iconVerifiedStyle = "text-neutral-50";
   const gradientVerifiedStyle = verifiedIcon
     ? { from: "#4ec0ed", to: "#1f9be5" }
     : { from: "#4ce08a", to: "#00c18f" };
 
   return (
-    <section aria-labelledby="outline-only">
-      <h2 id="outline-only">Icon: Outline</h2>
+    <section className="grid gap-4" aria-labelledby="outline-only">
+      <h2 className="text-xl font-bold text-slate-800" id="outline-only">
+        Icon: Outline
+      </h2>
       <div className="flex max-w-full flex-wrap gap-8">
         <button
           title="contrast"
@@ -74,7 +75,7 @@ export default function SectionIconOutline() {
         <button
           title={clsx(verifiedIcon ? "verified provider" : "verified teacher")}
           onClick={() => setVerifiedIcon(!verifiedIcon)}
-          className={clsx(buttonStyles, iconVerifiedStyle)}
+          className={buttonStyles}
         >
           <Asset.IconVerified className={iconStyles} linearGradient={gradientVerifiedStyle} />
         </button>
