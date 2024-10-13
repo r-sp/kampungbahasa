@@ -1,85 +1,39 @@
 "use client";
 
-import { useState } from "react";
 import clsx from "clsx";
+import React from "react";
 
 export default function SectionColor() {
-  const [theme, setTheme] = useState<boolean>(false);
+  function BoxColor({
+    text,
+    className,
+  }: { text: string } & React.ComponentPropsWithoutRef<"div">) {
+    return (
+      <li className="inline-flex w-full flex-col items-center gap-y-1">
+        <div className={clsx("h-14 min-w-full rounded-lg max-sm:min-w-14", className)}></div>
+        <span className="text-sm text-slate-600">{text}</span>
+      </li>
+    );
+  }
 
   return (
-    <section aria-labelledby="color">
-      <h2 id="color">Color</h2>
-      <div
-        onClick={() => setTheme(!theme)}
-        className={clsx("flex select-none flex-wrap", theme ? "dark" : "light")}
-      >
-        <div className="bg-kb-50 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-50</span>
-        </div>
-        <div className="bg-kb-100 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-100</span>
-        </div>
-        <div className="bg-kb-200 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-200</span>
-        </div>
-        <div className="bg-kb-300 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-300</span>
-        </div>
-        <div className="bg-kb-400 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-400</span>
-        </div>
-        <div className="bg-kb-500 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-500</span>
-        </div>
-        <div className="bg-kb-600 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-600</span>
-        </div>
-        <div className="bg-kb-700 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-700</span>
-        </div>
-        <div className="bg-kb-800 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-800</span>
-        </div>
-        <div className="bg-kb-900 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-900</span>
-        </div>
-        <div className="bg-kb-950 inline-flex px-8 py-4">
-          <span className="invert-auto">kb-950</span>
-        </div>
-        <div className="inline-flex bg-neutral-50 px-8 py-4">
-          <span className="invert-auto">neutral-50</span>
-        </div>
-        <div className="inline-flex bg-neutral-100 px-8 py-4">
-          <span className="invert-auto">neutral-100</span>
-        </div>
-        <div className="inline-flex bg-neutral-200 px-8 py-4">
-          <span className="invert-auto">neutral-200</span>
-        </div>
-        <div className="inline-flex bg-neutral-300 px-8 py-4">
-          <span className="invert-auto">neutral-300</span>
-        </div>
-        <div className="inline-flex bg-neutral-400 px-8 py-4">
-          <span className="invert-auto">neutral-400</span>
-        </div>
-        <div className="inline-flex bg-neutral-500 px-8 py-4">
-          <span className="invert-auto">neutral-500</span>
-        </div>
-        <div className="inline-flex bg-neutral-600 px-8 py-4">
-          <span className="invert-auto">neutral-600</span>
-        </div>
-        <div className="inline-flex bg-neutral-700 px-8 py-4">
-          <span className="invert-auto">neutral-700</span>
-        </div>
-        <div className="inline-flex bg-neutral-800 px-8 py-4">
-          <span className="invert-auto">neutral-800</span>
-        </div>
-        <div className="inline-flex bg-neutral-900 px-8 py-4">
-          <span className="invert-auto">neutral-900</span>
-        </div>
-        <div className="inline-flex bg-neutral-950 px-8 py-4">
-          <span className="invert-auto">neutral-950</span>
-        </div>
-      </div>
+    <section className="grid gap-4" aria-labelledby="color">
+      <h2 className="text-xl font-bold text-slate-800" id="color">
+        Color
+      </h2>
+      <ul className="flex max-w-full gap-x-1 overflow-x-auto">
+        <BoxColor className="bg-slate-50" text="50" />
+        <BoxColor className="bg-slate-100" text="100" />
+        <BoxColor className="bg-slate-200" text="200" />
+        <BoxColor className="bg-slate-300" text="300" />
+        <BoxColor className="bg-slate-400" text="400" />
+        <BoxColor className="bg-slate-500" text="500" />
+        <BoxColor className="bg-slate-600" text="600" />
+        <BoxColor className="bg-slate-700" text="700" />
+        <BoxColor className="bg-slate-800" text="800" />
+        <BoxColor className="bg-slate-900" text="900" />
+        <BoxColor className="bg-slate-950" text="950" />
+      </ul>
     </section>
   );
 }
