@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { type IconProps } from "../types";
 
 export default function IconVerified({
-  color = "currentColor",
   className,
   linearGradient,
   ...rest
@@ -27,7 +26,7 @@ export default function IconVerified({
       {...rest}
     >
       <path d={iconBadge} fill="url(#verified)" fillRule="evenodd" clipRule="evenodd" />
-      <path d={iconSign} fill={color} fillRule="evenodd" clipRule="evenodd" />
+      <path d={iconSign} fill="#FFFFFF" fillRule="evenodd" clipRule="evenodd" />
       <defs>
         <linearGradient
           id="verified"
