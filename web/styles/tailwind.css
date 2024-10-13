@@ -63,6 +63,21 @@
   --neutral-950: #ffffff;
 }
 
+:root {
+  --hue: 210;
+  --surface-50: hsl(var(--hue), 0%, 100%);
+  --surface-100: hsl(var(--hue), 8%, 95%);
+  --surface-200: hsl(var(--hue), 8%, 90%);
+  --surface-300: hsl(var(--hue), 8%, 85%);
+  --surface-400: hsl(var(--hue), 8%, 80%);
+  --surface-500: hsl(var(--hue), 8%, 60%);
+  --surface-600: hsl(var(--hue), 8%, 40%);
+  --surface-700: hsl(var(--hue), 8%, 24%);
+  --surface-800: hsl(var(--hue), 8%, 16%);
+  --surface-900: hsl(var(--hue), 8%, 8%);
+  --surface-950: hsl(var(--hue), 0%, 0%);
+}
+
 *,
 ::before,
 ::after {
