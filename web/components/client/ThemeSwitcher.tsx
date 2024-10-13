@@ -25,7 +25,7 @@ export default function ThemeSwitcher() {
         />
         <label
           htmlFor="theme-system"
-          className={theme === "system" ? "text-neutral-900" : "text-neutral-400"}
+          className={theme === "system" ? "text-slate-900" : "text-slate-600"}
         >
           <span className="sr-only">OS Default</span>
           <IconThemeContrast aria-hidden="true" className="block size-6" />
@@ -44,7 +44,7 @@ export default function ThemeSwitcher() {
         />
         <label
           htmlFor="theme-light"
-          className={theme === "light" ? "text-neutral-900" : "text-neutral-400"}
+          className={theme === "light" ? "text-slate-900" : "text-slate-600"}
         >
           <span className="sr-only">Light</span>
           <IconThemeLight aria-hidden="true" className="block size-6" />
@@ -63,7 +63,7 @@ export default function ThemeSwitcher() {
         />
         <label
           htmlFor="theme-dark"
-          className={theme === "dark" ? "text-neutral-900" : "text-neutral-400"}
+          className={theme === "dark" ? "text-slate-900" : "text-slate-600"}
         >
           <span className="sr-only">Dark</span>
           <IconThemeDark aria-hidden="true" className="block size-6" />
