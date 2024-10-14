@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import React from "react";
 
-export default function SectionColor() {
+export default function Color() {
   function BoxColor({
     text,
     className,

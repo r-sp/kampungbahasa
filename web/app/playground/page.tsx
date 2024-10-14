@@ -1,8 +1,5 @@
 import Link from "next/link";
-
-import SectionColor from "./section/color";
-import SectionIconVariant from "./section/icon-variant";
-import SectionIconOutline from "./section/icon-outline";
+import Section from "./section";
 
 export default function PlaygroundPage() {
   return (
@@ -13,9 +10,9 @@ export default function PlaygroundPage() {
       >
         Playground
       </h1>
-      <SectionColor />
-      <SectionIconVariant />
-      <SectionIconOutline />
+      <Section.Color />
+      <Section.IconVariant />
+      <Section.IconOutline />
       <hr />
       <p className="flex">
         <Link

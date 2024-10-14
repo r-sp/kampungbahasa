@@ -1,13 +1,14 @@
 "use client";
 
+import { useContext, useState } from "react";
+import { ThemeContext } from "~/components/context";
+import { useThemeSwitch } from "~/components/hooks";
 import * as Asset from "~/assets/icons";
-import { useState } from "react";
 import clsx from "clsx";
 
-export default function SectionIconOutline() {
-  const [contrastIcon, setContrastIcon] = useState<boolean>(true);
-  const [lightIcon, setLightIcon] = useState<boolean>(true);
-  const [darkIcon, setDarkIcon] = useState<boolean>(true);
+export default function IconOutline() {
+  const context = useContext(ThemeContext);
+  const { theme, useTheme } = useThemeSwitch(context);
   const [copyIcon, setCopyIcon] = useState<boolean>(true);
   const [optionsIcon, setOptionsIcon] = useState<boolean>(true);
   const [menuIcon, setMenuIcon] = useState<boolean>(true);
@@ -32,22 +33,22 @@ export default function SectionIconOutline() {
       <div className="flex max-w-full flex-wrap gap-8">
         <button
           title="contrast"
-          onClick={() => setContrastIcon(!contrastIcon)}
-          className={clsx(buttonStyles, contrastIcon ? buttonDisable : buttonActive)}
+          onClick={() => useTheme("system")}
+          className={clsx(buttonStyles, theme === "system" ? buttonActive : buttonDisable)}
         >
           <Asset.IconThemeContrast className={iconStyles} />
         </button>
         <button
           title="light mode"
-          onClick={() => setLightIcon(!lightIcon)}
-          className={clsx(buttonStyles, lightIcon ? buttonDisable : buttonActive)}
+          onClick={() => useTheme("light")}
+          className={clsx(buttonStyles, theme === "light" ? buttonActive : buttonDisable)}
         >
           <Asset.IconThemeLight className={iconStyles} />
         </button>
         <button
           title="dark mode"
-          onClick={() => setDarkIcon(!darkIcon)}
-          className={clsx(buttonStyles, darkIcon ? buttonDisable : buttonActive)}
+          onClick={() => useTheme("dark")}
+          className={clsx(buttonStyles, theme === "dark" ? buttonActive : buttonDisable)}
         >
           <Asset.IconThemeDark className={iconStyles} />
         </button>

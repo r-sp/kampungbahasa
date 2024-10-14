@@ -4,7 +4,7 @@ import * as Asset from "~/assets/icons";
 import { useState } from "react";
 import clsx from "clsx";
 
-export default function SectionIconVariant() {
+export default function IconVariant() {
   const [homeIcon, setHomeIcon] = useState<boolean>(true);
   const [searchIcon, setSearchIcon] = useState<boolean>(true);
   const [favoriteIcon, setFavoriteIcon] = useState<boolean>(true);
