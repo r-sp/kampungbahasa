@@ -21,6 +21,17 @@ export default {
         "900": "var(--slate-900)",
         "950": "var(--slate-950)",
       },
+      state: {
+        "100": "var(--state-100)",
+        "200": "var(--state-200)",
+        "300": "var(--state-300)",
+        "400": "var(--state-400)",
+        "500": "var(--state-500)",
+        "600": "var(--state-600)",
+        "700": "var(--state-700)",
+        "800": "var(--state-800)",
+        "900": "var(--state-900)",
+      },
     },
     screens: {
       xs: { raw: "(min-width: 32em)" },
