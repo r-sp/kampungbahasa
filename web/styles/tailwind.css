@@ -12,6 +12,18 @@
   --slate-800: hsl(210, 8%, 16%);
   --slate-900: hsl(210, 8%, 8%);
   --slate-950: hsl(210, 0%, 0%);
+  --red: 12;
+  --green: 150;
+  --blue: 210;
+  --state-100: hsl(var(--red), 85%, 35%);
+  --state-200: hsl(var(--red), 85%, 30%);
+  --state-300: hsl(var(--red), 85%, 25%);
+  --state-400: hsl(var(--green), 100%, 25%);
+  --state-500: hsl(var(--green), 100%, 20%);
+  --state-600: hsl(var(--green), 100%, 15%);
+  --state-700: hsl(var(--blue), 100%, 45%);
+  --state-800: hsl(var(--blue), 100%, 40%);
+  --state-900: hsl(var(--blue), 100%, 35%);
 }
 
 .dark {
@@ -26,6 +38,15 @@
   --slate-800: hsl(210, 8%, 84%);
   --slate-900: hsl(210, 8%, 92%);
   --slate-950: hsl(210, 0%, 100%);
+  --state-100: hsl(var(--red), 85%, 60%);
+  --state-200: hsl(var(--red), 85%, 55%);
+  --state-300: hsl(var(--red), 85%, 50%);
+  --state-400: hsl(var(--green), 85%, 45%);
+  --state-500: hsl(var(--green), 85%, 40%);
+  --state-600: hsl(var(--green), 85%, 35%);
+  --state-700: hsl(var(--blue), 85%, 60%);
+  --state-800: hsl(var(--blue), 85%, 55%);
+  --state-900: hsl(var(--blue), 85%, 50%);
 }
 
 *,

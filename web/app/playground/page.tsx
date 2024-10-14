@@ -19,7 +19,7 @@ export default function PlaygroundPage() {
       <hr />
       <p className="flex">
         <Link
-          className="inline-flex truncate rounded-lg bg-slate-800 px-4 py-3 text-sm font-medium text-slate-50"
+          className="inline-flex truncate rounded-lg bg-slate-950 px-4 py-3 text-sm font-medium text-slate-50"
           href="/"
         >
           Back to Homepage
