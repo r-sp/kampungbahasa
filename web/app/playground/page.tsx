@@ -14,12 +14,24 @@ export default function PlaygroundPage() {
       <Section.IconVariant />
       <Section.IconOutline />
       <hr />
-      <p className="flex">
+      <p className="flex flex-wrap gap-4">
         <Link
-          className="inline-flex truncate rounded-lg bg-slate-950 px-4 py-3 text-sm font-medium text-slate-50"
+          className="text-state-100 hover:text-state-200 active:text-state-300 inline-flex truncate rounded-lg border border-solid px-4 py-3 text-sm font-medium"
           href="/"
         >
-          Back to Homepage
+          Homepage
+        </Link>
+        <Link
+          className="text-state-400 hover:text-state-500 active:text-state-600 inline-flex truncate rounded-lg border border-solid px-4 py-3 text-sm font-medium"
+          href="/"
+        >
+          Homepage
+        </Link>
+        <Link
+          className="bg-state-700 hover:bg-state-800 active:bg-state-900 inline-flex truncate rounded-lg px-4 py-3 text-sm font-medium text-slate-50"
+          href="/"
+        >
+          Homepage
         </Link>
       </p>
     </article>
