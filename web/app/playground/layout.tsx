@@ -2,6 +2,9 @@ import { type Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Playground",
+  alternates: {
+    canonical: "/playground",
+  },
 };
 
 export default function PlaygroundLayout(props: { children: React.ReactNode }) {

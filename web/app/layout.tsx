@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     default: "Kampung Bahasa",
   },
   description: "FKB's proposal to help with its digital transformation",
+  metadataBase: new URL("https://kampungbahasa.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
