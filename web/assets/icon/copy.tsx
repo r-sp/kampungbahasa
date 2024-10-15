@@ -1,3 +1,5 @@
+"use client";
+
 import { type IconProps } from "../types";
 
 export default function IconCopy({

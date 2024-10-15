@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Banner } from "~/assets/logo";
 import { ThemeSwitcher } from "~/components/client";
