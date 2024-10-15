@@ -2,7 +2,7 @@
 
 import { useContext, useState } from "react";
 import { ThemeContext } from "~/components/context";
-import { useThemeProvider } from "~/components/hooks";
+import { useThemeProvider } from "~/components/theme";
 import * as Asset from "~/assets/icons";
 import clsx from "clsx";
 

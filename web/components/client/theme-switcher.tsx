@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { ThemeContext } from "~/components/context";
-import { useThemeProvider } from "~/components/hooks";
+import { useThemeProvider } from "~/components/theme";
 import { IconThemeContrast, IconThemeDark, IconThemeLight } from "~/assets/icons";
 
 export default function ThemeSwitcher() {
@@ -10,7 +10,7 @@ export default function ThemeSwitcher() {
   const { theme, useTheme } = useThemeProvider(context);
 
   return (
-    <fieldset data-theme={theme} className="flex gap-1">
+    <fieldset className="flex gap-1">
       <legend className="sr-only">Select a display theme:</legend>
       <span className="inline-flex">
         <input
