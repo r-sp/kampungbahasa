@@ -138,15 +138,6 @@ export function useThemeSwitch(props: {
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const local = getLocalTheme();
-
-    if (local === "dark") {
-      props.setTheme("dark");
-    } else if (local === "light") {
-      props.setTheme("light");
-    } else {
-      props.setTheme("system");
-    }
 
     media.addEventListener("change", setLocalTheme);
     return () => {
