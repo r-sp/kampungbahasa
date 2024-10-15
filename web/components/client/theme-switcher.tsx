@@ -2,12 +2,12 @@
 
 import { useContext } from "react";
 import { ThemeContext } from "~/components/context";
-import { useThemeSwitch } from "~/components/hooks";
+import { useThemeProvider } from "~/components/hooks";
 import { IconThemeContrast, IconThemeDark, IconThemeLight } from "~/assets/icons";
 
 export default function ThemeSwitcher() {
   const context = useContext(ThemeContext);
-  const { theme, useTheme } = useThemeSwitch(context);
+  const { theme, useTheme } = useThemeProvider(context);
 
   return (
     <fieldset data-theme={theme} className="flex gap-1">

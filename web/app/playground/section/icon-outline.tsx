@@ -2,13 +2,13 @@
 
 import { useContext, useState } from "react";
 import { ThemeContext } from "~/components/context";
-import { useThemeSwitch } from "~/components/hooks";
+import { useThemeProvider } from "~/components/hooks";
 import * as Asset from "~/assets/icons";
 import clsx from "clsx";
 
 export default function IconOutline() {
   const context = useContext(ThemeContext);
-  const { theme, useTheme } = useThemeSwitch(context);
+  const { theme, useTheme } = useThemeProvider(context);
   const [copyIcon, setCopyIcon] = useState<boolean>(true);
   const [optionsIcon, setOptionsIcon] = useState<boolean>(true);
   const [menuIcon, setMenuIcon] = useState<boolean>(true);

@@ -48,22 +48,22 @@ export function useStickyHeader() {
   return sticky;
 }
 
-export function useThemeSwitch(props: {
-  theme: "dark" | "light" | "system";
-  setTheme: React.Dispatch<React.SetStateAction<"dark" | "light" | "system">>;
+export function useThemeProvider(props: {
+  theme: string | undefined;
+  setTheme: React.Dispatch<React.SetStateAction<string | undefined>>;
 }) {
   const theme = props.theme;
 
-  function cleanTheme(prev: typeof props.theme) {
+  function cleanTheme(prev: "dark" | "light" | "system") {
     if (document.documentElement.classList.contains(prev))
       document.documentElement.classList.remove(prev);
   }
 
-  function applyTheme(next: typeof props.theme) {
+  function applyTheme(next: "dark" | "light" | "system") {
     document.documentElement.classList.add(next);
   }
 
-  function storeTheme(store: typeof props.theme) {
+  function storeTheme(store: "dark" | "light" | "system") {
     if (typeof window !== "undefined") {
       try {
         localStorage.setItem("theme", store);
@@ -106,7 +106,7 @@ export function useThemeSwitch(props: {
     props.setTheme("light");
   }
 
-  function useTheme(variant: typeof props.theme) {
+  function useTheme(variant: "dark" | "light" | "system") {
     if (variant === "dark") {
       setThemeDark();
     } else if (variant === "light") {

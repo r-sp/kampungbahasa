@@ -4,7 +4,7 @@ import { useEffect, useState, useMemo } from "react";
 import { ThemeContext } from "~/components/context";
 
 export default function ThemeProvider(props: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<"dark" | "light" | "system">("system");
+  const [theme, setTheme] = useState<string | undefined>(undefined);
 
   useEffect(() => {
     let local;
