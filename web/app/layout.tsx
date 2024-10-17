@@ -37,7 +37,9 @@ export default function RootLayout(
       </head>
       <body>
         <ThemeProvider>
-          <div id="root">{props.children}</div>
+          <div id="root" role="none">
+            {props.children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
