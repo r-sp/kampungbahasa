@@ -2,6 +2,7 @@
 
 import { type Config } from "tailwindcss";
 import typography from "@tailwindcss/typography";
+import typographyStyles from "./styles/typography";
 
 export default {
   content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -61,38 +62,10 @@ export default {
         "screen-lg": "64em",
         "screen-xl": "80em",
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            "--tw-prose-body": "var(--slate-700)",
-            "--tw-prose-headings": "var(--slate-950)",
-            "--tw-prose-lead": "var(--slate-800)",
-            "--tw-prose-links": "#0074e0",
-            "--tw-prose-bold": "var(--slate-900)",
-
-            "--tw-prose-counters": "var(--slate-500)",
-            "--tw-prose-bullets": "var(--slate-500)",
-            "--tw-prose-hr": "var(--slate-400)",
-
-            "--tw-prose-quotes": "var(--slate-800)",
-            "--tw-prose-quote-borders": "var(--slate-500)",
-            "--tw-prose-captions": "var(--slate-600)",
-
-            "--tw-prose-kbd": "var(--slate-800)",
-            "--tw-prose-kbd-shadows": "17 55 55",
-
-            "--tw-prose-code": "var(--slate-800)",
-            "--tw-prose-pre-code": "var(--slate-800)",
-            "--tw-prose-pre-bg": "var(--slate-200)",
-
-            "--tw-prose-th-borders": "var(--slate-500)",
-            "--tw-prose-td-borders": "var(--slate-400)",
-          },
-        },
-      },
+      typography: typographyStyles,
     },
   },
-  plugins: [typography],
+  plugins: [typography({ className: "prose", target: "modern" })],
   corePlugins: {
     preflight: true,
     backdropOpacity: false,
