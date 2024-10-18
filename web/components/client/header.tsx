@@ -49,6 +49,18 @@ export default function Header(props: { children?: React.ReactNode }) {
           Dashboard
         </Link>
         <Link
+          className={clsx(currentPath === "/careers" ? "text-slate-900" : "text-slate-600")}
+          href="/careers"
+        >
+          Careers
+        </Link>
+        <Link
+          className={clsx(currentPath === "/schedule" ? "text-slate-900" : "text-slate-600")}
+          href="/schedule"
+        >
+          Schedule
+        </Link>
+        <Link
           className={clsx(currentPath === "/login" ? "text-slate-900" : "text-slate-600")}
           href="/login"
         >
@@ -67,6 +79,50 @@ export default function Header(props: { children?: React.ReactNode }) {
           href="/account/settings"
         >
           Settings
+        </Link>
+      </nav>
+      <nav className="mx-auto flex w-full max-w-screen-lg gap-4 max-sm:flex-col">
+        <Link
+          className={clsx(currentPath === "/about" ? "text-slate-900" : "text-slate-600")}
+          href="/about"
+        >
+          About
+        </Link>
+        <Link
+          className={clsx(currentPath === "/community" ? "text-slate-900" : "text-slate-600")}
+          href="/community"
+        >
+          Community
+        </Link>
+        <Link
+          className={clsx(currentPath === "/faq" ? "text-slate-900" : "text-slate-600")}
+          href="/faq"
+        >
+          FAQ
+        </Link>
+        <Link
+          className={clsx(currentPath === "/feedback" ? "text-slate-900" : "text-slate-600")}
+          href="/feedback"
+        >
+          Feedback
+        </Link>
+        <Link
+          className={clsx(currentPath === "/legal" ? "text-slate-900" : "text-slate-600")}
+          href="/legal"
+        >
+          Legal
+        </Link>
+        <Link
+          className={clsx(currentPath === "/payments" ? "text-slate-900" : "text-slate-600")}
+          href="/payments"
+        >
+          Payments
+        </Link>
+        <Link
+          className={clsx(currentPath === "/status" ? "text-slate-900" : "text-slate-600")}
+          href="/status"
+        >
+          Status
         </Link>
       </nav>
       {props.children}
