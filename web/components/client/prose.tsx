@@ -1,6 +1,8 @@
+"use client";
+
 import clsx from "clsx";
 
-export function Prose<T extends React.ElementType = "article">({
+export default function Prose<T extends React.ElementType = "article">({
   as,
   className,
   ...props
@@ -10,5 +12,5 @@ export function Prose<T extends React.ElementType = "article">({
 }) {
   const Component = as ?? "article";
 
-  return <Component className={clsx(className, "prose prose-h1:tracking-tight")} {...props} />;
+  return <Component className={clsx(className, "prose-fiction")} {...props} />;
 }
