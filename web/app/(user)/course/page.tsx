@@ -1,4 +1,12 @@
+import { type Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Course",
+  alternates: {
+    canonical: "/course",
+  },
+};
 
 export default function CoursePage() {
   const ItemCourse = (props: { en: string; id: string }) => {
