@@ -63,22 +63,10 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
   text-size-adjust: 100%;
-}
-body {
-  min-height: 100vh;
-}
-html,
-body {
-  display: block;
   -webkit-tap-highlight-color: transparent;
 }
-article,
-section {
-  hyphens: manual;
-  letter-spacing: 0em;
-  overflow-wrap: break-word;
-  text-align: left;
-  text-wrap: pretty;
+body {
+  min-height: 100svh;
 }
 a {
   color: inherit;
@@ -99,31 +87,52 @@ ol,
 ul {
   list-style: none;
 }
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-thead,
-tr,
-tfoot,
-hr,
-blockquote {
-  border-style: solid;
-}
+a,
 button,
 label {
   cursor: pointer;
 }
-img {
-  display: block;
-  max-width: max-content;
-  width: 100%;
-}
 :disabled {
   cursor: default;
 }
-[hidden] {
+[hidden],
+textarea,
+iframe {
   display: none;
+}
+html,
+body,
+header,
+main,
+footer,
+section,
+article,
+figure,
+picture,
+img,
+pre,
+blockquote,
+p,
+ul,
+ol,
+dl,
+dt,
+dd,
+hr {
+  display: block;
+}
+table {
+  display: table;
+}
+thead {
+  display: table-header-group;
+}
+tr {
+  display: table-row;
+}
+th,
+td {
+  display: table-cell;
 }
 
 /** @tailwind base; **/
