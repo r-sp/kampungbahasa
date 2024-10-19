@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
 import { type Config } from "tailwindcss";
-import typography from "@tailwindcss/typography";
-import typographyStyles from "./styles/typography";
 
 export default {
-  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./mdx-components.tsx",
+  ],
   darkMode: "selector",
   theme: {
     colors: {
@@ -62,10 +64,8 @@ export default {
         "screen-lg": "64em",
         "screen-xl": "80em",
       },
-      typography: typographyStyles,
     },
   },
-  plugins: [typography({ className: "prose", target: "legacy" })],
   corePlugins: {
     preflight: true,
     backdropOpacity: false,
