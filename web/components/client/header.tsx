@@ -8,7 +8,7 @@ export default function Header(props: { children?: React.ReactNode }) {
   const currentPath = usePathname();
 
   return (
-    <header className="flex flex-col items-start gap-4 p-4">
+    <header className="flex flex-col items-start gap-4 p-4 tracking-wide">
       <nav className="mx-auto flex w-full max-w-screen-lg gap-4 max-sm:flex-col">
         <Link
           className={clsx(currentPath === "/" ? "text-slate-900" : "text-slate-600")}

@@ -35,7 +35,7 @@ export default function CoursePage() {
   return (
     <>
       <h1 className="text-4xl font-bold sm:text-5xl">Course</h1>
-      <ul className="mt-4 flex flex-col gap-6 text-base">
+      <ul className="mt-4 flex flex-col gap-6 text-base tracking-wide">
         <ItemCourse en="Arabic" id="Arab" />
         <ItemCourse en="Dutch" id="Belanda" />
         <ItemCourse en="English" id="Inggris" />

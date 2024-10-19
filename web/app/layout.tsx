@@ -1,10 +1,11 @@
 import { type Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import { ThemeProvider, ThemeScript } from "~/components/client";
 import "~/styles/tailwind.css";
 
-const fontInter = Inter({
+const fontInter = Inter_Tight({
   subsets: ["latin"],
+  style: ["normal", "italic"],
   variable: "--font-inter",
   weight: "variable",
 });
