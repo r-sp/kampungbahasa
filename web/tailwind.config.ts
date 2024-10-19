@@ -65,7 +65,7 @@ export default {
       typography: typographyStyles,
     },
   },
-  plugins: [typography({ className: "prose", target: "modern" })],
+  plugins: [typography({ className: "prose", target: "legacy" })],
   corePlugins: {
     preflight: true,
     backdropOpacity: false,
