@@ -6,9 +6,9 @@ export default function TypographyPage() {
       <Header />
       <main className="p-4">
         <section className="mx-auto w-full max-w-screen-lg">
-          <Prose>
+          <Prose className="mx-auto">
             <h1>Typography</h1>
-            <p className="lead">
+            <p>
               Until now, trying to style an article, document, or blog post with Tailwind has
               been a tedious task that required a keen eye for typography and a lot of complex
               custom CSS.
@@ -55,7 +55,7 @@ export default function TypographyPage() {
                 earning such an iconic status in our culture that kids will often dress up as
                 warm, cheesy loaf for Halloween. &lt;/p&gt; &lt;p&gt; But a recent study shows
                 that the celebrated appetizer may be linked to a series of rabies cases
-                springing up around the country. &lt;/p&gt; &lt;!-- ... --&gt; &lt;/article&gt;
+                springing up around the country. &lt;/p&gt; &lt;
               </code>
             </pre>
             <p>

@@ -12,5 +12,7 @@ export default function Prose<T extends React.ElementType = "article">({
 }) {
   const Component = as ?? "article";
 
-  return <Component className={clsx(className, "prose-fiction")} {...props} />;
+  return (
+    <Component className={clsx(className, "prose-fiction max-w-prose text-base")} {...props} />
+  );
 }
