@@ -1,14 +1,7 @@
 import { type Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { InterTight } from "~/assets/fonts";
 import { ThemeProvider, ThemeScript } from "~/components/client";
 import "~/styles/tailwind.css";
-
-const fontInter = Inter_Tight({
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-  variable: "--font-inter",
-  weight: "variable",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -32,7 +25,7 @@ export default function RootLayout(
   }>,
 ) {
   return (
-    <html lang="en" className={fontInter.variable} suppressHydrationWarning>
+    <html lang="en" className={InterTight.variable} suppressHydrationWarning>
       <head>
         <ThemeScript />
       </head>
