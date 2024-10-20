@@ -47,6 +47,11 @@ export default function CoursePage() {
         <ItemCourse en="Mandarin" id="Mandarin" />
         <ItemCourse en="Russian" id="Rusia" />
         <ItemCourse en="Spanish" id="Spanyol" />
+        <li>
+          <Link className="text-state-700" href="/typography">
+            The Ultimate Guide To CEFR Language Levels: From A1 To C2
+          </Link>
+        </li>
       </ul>
     </>
   );

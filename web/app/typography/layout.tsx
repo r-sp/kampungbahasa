@@ -9,7 +9,9 @@ export default function mdxLayout(
     <>
       <Header />
       <main className="p-4">
-        <article className="prose-fiction mx-auto w-full max-w-prose">{props.children}</article>
+        <section className="mx-auto w-full max-w-screen-md break-words">
+          {props.children}
+        </section>
       </main>
       <footer className="p-4">
         <p className="mx-auto w-full max-w-screen-lg text-slate-500">layout: mdx</p>

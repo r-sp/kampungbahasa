@@ -5,227 +5,200 @@ export const metadata = {
   },
 };
 
-# Typography
+# The Ultimate Guide To CEFR Language Levels: From A1 To C2
 
-Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.
+If you constantly find yourself questioning whether you can proudly proclaim your knowledge of a particular language to your friends or not, then you should refer to the CEFR language levels table. CEFR, which stands for the Common European Framework of Reference for Languages, is something every language learner should be familiar with, and in this post, I will explain what it is, how it categorizes language proficiency into its A, B, and C levels, and how you can prove your proficiency when needed.
 
-By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you _really are_ just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.
+## What is CEFR?
 
-We get lots of complaints about it actually, with people regularly asking us things like:
+The official definition of CEFR is the Common European Framework of Reference for Languages. Although that may sound cool, unfortunately, it doesn't provide much insight, at least to me.
 
-> Why is Tailwind removing the default styles on my `h1` elements? How do I disable this? What do you mean I lose all the other base styles too?
+To put it differently, CEFR is what helps you to determine how good your language skills are no matter what language you’re learning. Depending on what you can (or cannot) do in your target language, CEFR assesses your proficiency according to its levels, from A1 to C2. And since CEFR is a _common_ assessment framework, every time you refer to your CEFR language level people can quickly evaluate your language abilities.
 
-We hear you, but we're not convinced that simply disabling our base styles is what you really want. You don't want to have to remove annoying margins every time you use a `p` element in a piece of your dashboard UI. And I doubt you really want your blog posts to use the user-agent styles either — you want them to look _awesome_, not awful.
+In simpler terms, CEFR helps determine the level of your language skills regardless of the language you're learning. It assesses your proficiency based on its levels, ranging from A1 to C2, depending on what you can or cannot do in your target language. Since CEFR is a widely _recognized_ assessment framework, referring to your CEFR language level allows others to quickly evaluate your language abilities.
 
-The `@tailwindcss/typography` plugin is our attempt to give you what you _actually_ want, without any of the downsides of doing something stupid like disabling our base styles.
+It's definitely more informative than simply saying, "_Oh, I speak some French_."
 
-It adds a new `prose` class that you can slap on any block of vanilla HTML content and turn it into a beautiful, well-formatted document:
+It's important to note that CEFR is not a language test itself; it serves as a framework that language tests refer to when defining results and assessing the proficiency of individual learners. It works with a wide range of languages and language tests.
 
-```html
-<article class="prose">
-  <h1>Garlic bread with cheese: What the science tells us</h1>
-  <p>
-    For years parents have espoused the health benefits of eating garlic bread with cheese to
-    their children, with the food earning such an iconic status in our culture that kids will
-    often dress up as warm, cheesy loaf for Halloween.
-  </p>
-  <p>
-    But a recent study shows that the celebrated appetizer may be linked to a series of rabies
-    cases springing up around the country.
-  </p>
-  <!-- ... -->
-</article>
-```
+## Which languages can be assessed by CEFR?
 
-For more information about how to use the plugin and the features it includes, [read the documentation](https://github.com/tailwindcss/typography/blob/main/README.md).
+The Common European Framework is called "common European" for a reason. While initially designed to work with numerous European languages, it has expanded beyond European borders and now includes languages such as Japanese, Chinese, and even Esperanto.
 
----
+Overall, CEFR supports tests in 40 languages. Here is a list of some of them:
 
-## What to expect from here on out
+> Arabic, Albanian, Armenian, Basque, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Esperanto, Estonian, Finnish, French, Friulian, Galician, Georgian, German, Greek, Hebrew, Hungarian, Italian, Japanese, Korean, Lithuanian, Macedonian, Moldovan, Norwegian, Polish, Portuguese, Russian, Serbian (Iekavian version), Slovak, Slovenian, Spanish, Swedish, Turkish and Ukrainian.
 
-What follows from here is just a bunch of absolute nonsense I've written to dogfood the plugin itself. It includes every sensible typographic element I could think of, like **bold text**, unordered lists, ordered lists, code blocks, block quotes, _and even italics_.
+If your target language is on this list (and there's a 99.9% chance that it is), you will likely come across CEFR at some point, either now or in the near future. And that's not a bad thing at all.
 
-It's important to cover all of these use cases for a few reasons:
+How does CEFR assess your language proficiency?
 
-1. We want everything to look good out of the box.
-2. Really just the first reason, that's the whole point of the plugin.
-3. Here's a third pretend reason though a list with three items looks more realistic than a list with two items.
+For the longest time, I believed there were only four language skills:
 
-Now we're going to try out another header style.
+- **Listening** (a passive skill)
+- **Reading** (another passive skill)
+- **Speaking** (an active skill)
+- **Writing** (one more active skill)
 
-### Typography should be easy
+But, oh boy, was I mistaken!
 
-So that's a header for you — with any luck if we've done our job correctly that will look pretty reasonable.
+The creators of the Common European Framework managed to complicate things by introducing six language skills. Are you ready?
 
-Something a wise person once told me about typography is:
+Instead of using the usual active/passive skill system, CEFR operates on three distinct levels:
 
-> Typography is pretty important if you don't want your stuff to look like trash. Make it good then it won't be bad.
+### Reception (oral/written)
 
-It's probably important that images look okay here by default as well:
+Reception refers to your ability to understand the input. It could be someone shouting in your ear with a Quebecois accent (I hope you never have to experience that), or it could be silently reading _Le Monde_ during your morning coffee with croissants in Paris.
 
-<figure>
-  <img
-    src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
-    alt=""
-  />
-  <figcaption>
-    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
-    of classical Latin literature from 45 BC, making it over 2000 years old.
-  </figcaption>
-</figure>
+This corresponds to the listening and reading parts of the majority of language tests.
 
-Now I'm going to show you an example of an unordered list to make sure that looks good, too:
+### Interaction (oral/written)
 
-- So here is the first item in this list.
-- In this example we're keeping the items short.
-- Later, we'll use longer, more complex list items.
+This includes not only knowledge of the language at hand (_know-what-to-say_) but also knowledge of pragmatics (_know-how-to-say_). It's about being polite, appropriate, and abiding by the code of conduct, whatever it happens to be.
 
-And that's the end of this section.
+On tests, you demonstrate this ability when writing a letter to an imaginary authority and then politely conversing with an interviewer.
 
-## What if we stack headings?
+### Production (oral/written)
 
-### We should make sure that looks good, too.
+The interaction was all about using an appropriate type of language; Production, on the other hand, is more about expressing yourself in a clear and comprehensible manner. This is where you probably want to show off your grammar, pronunciation, and spelling skills, my friend.
 
-Sometimes you have headings directly underneath each other. In those cases you often have to undo the top margin on the second heading because it usually looks better for the headings to be closer together than a paragraph followed by a heading should be.
+Here, you're likely to write an essay and defend your opinion in a discussion with an interviewer.
 
-### When a heading comes after a paragraph …
+Your performance in each task counts. The better you do, the higher CEFR level you achieve. And there's a lot to say about these levels themselves.
 
-When a heading comes after a paragraph, we need a bit more space, like I already mentioned above. Now let's see what a more complex list would look like.
+## What are the six CEFR language levels?
 
-- **I often do this thing where list items have headings.**
+Language proficiency levels can be broadly categorized as _basic_, _intermediate_, and _proficient_. However, language abilities vary so vastly that these primary labels are not descriptive enough to be precise. For this reason, CEFR introduced its ABC system.
 
-  For some reason I think this looks cool which is unfortunate because it's pretty annoying to get the styles right.
+In this system, A1 and A2 correspond to very basic language skills. Then, B1 and B2 represent more sophisticated knowledge of a target language. Finally, C1 and C2 serve as indicators of high proficiency and fluency in that language.
 
-  I often have two or three paragraphs in these list items, too, so the hard part is getting the spacing between the paragraphs, list item heading, and separate list items to all make sense. Pretty tough honestly, you could make a strong argument that you just shouldn't write this way.
+Since language proficiency is something vague, subjective, and highly dependent on your self-esteem, CEFR offers short descriptors for each level.
 
-- **Since this is a list, I need at least two items.**
+## A2 level: The Newbie Level 2
 
-  I explained what I'm doing already in the previous list item, but a list wouldn't be a list if it only had one item, and we really want this to look realistic. That's why I've added this second list item so I actually have something to look at when writing the styles.
+I'm not sure when things start to significantly improve, but it's certainly not at the A2 level.
 
-- **It's not a bad idea to add a third item either.**
+Nevertheless, at this level, you have expanded your vocabulary to the point where you can move beyond simply pointing and naming things to engage in more direct information exchange. This may include asking for and giving directions, talking about your family, or politely indicating to a corner shop vendor that their tomatoes are too expensive. And all of this is still done using simple language.
 
-  I think it probably would've been fine to just use two items but three is definitely not worse, and since I seem to be having no trouble making up arbitrary things to type, I might as well include it. I'm going to press <kbd>Enter</kbd> now.
+_Not all CEFR language levels have a real-world point of reference, especially at the basic proficiency level. So I don't know of any institutions that would actually ask for proof of your A2 proficiency, sorry_.
 
-After this sort of list I usually have a closing statement or paragraph, because it kinda looks weird jumping right to a heading.
+## B1 level: The Required Minimum
 
-## Code should look okay by default.
+When you reach B1, you start feeling the progress.
 
-I think most people are going to use [highlight.js](https://highlightjs.org/) or [Prism](https://prismjs.com/) or something if they want to style their code blocks but it wouldn't hurt to make them look _okay_ out of the box, even with no syntax highlighting.
+You're not perfect, not even good, but at least you are independent enough to go about your business in your target language. Your vocabulary is wide enough to meet all your needs when dealing with familiar matters and points of personal interest, whether it's at work, at home, or in a local restaurant. Your speech starts to resemble that of a sane and cognitively developed person, as you can now express your desires, give reasons, and explain your ideas. Plus, you begin to understand the natives much better (if they don't have a heavy accent, of course).
 
-Here's what a default `tailwind.config.js` file looks like at the time of writing:
+_Another point of reference for this level is Austrian immigration. Once you have reached the B1 level in German, you'll be able to apply for citizenship in this European country_.
 
-```js
-module.exports = {
-  purge: [],
-  theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
-};
-```
+## B2 Level: The Sweet Spot
 
-Hopefully that looks good enough to you.
+At the B2 level, you actually experience a feeling of freedom when speaking a foreign language.
 
-### What about nested lists?
+Here, you can read and understand complex things, such as your morning newspaper or the book of your favorite childhood writer translated into your target language. You become more at ease with spontaneous speech since words no longer get stuck in your brain as they did before. At the CEFR B2 level, you are able to reason and provide logical and coherent explanations. And yes, you need to know how to write everything down.
 
-Nested lists basically always look bad which is why editors like Medium don't even let you do it, but I guess since some of you goofballs are going to do it we have to carry the burden of at least making it work.
+_Something between B2 and C1 is usually required to be admitted to a university in a foreign country. The more proficient you are, the better, but the requirements vary from country to country. For example, Hungarian universities usually request B2 certificates, while colleges in Germany ask for C1_.
 
-1. **Nested lists are rarely a good idea.**
-   - You might feel like you are being really "organized" or something but you are just creating a gross shape on the screen that is hard to read.
-   - Nested navigation in UIs is a bad idea too, keep things as flat as possible.
-   - Nesting tons of folders in your source code is also not helpful.
-2. **Since we need to have more items, here's another one.**
-   - I'm not sure if we'll bother styling more than two levels deep.
-   - Two is already too much, three is guaranteed to be a bad idea.
-   - If you nest four levels deep you belong in prison.
-3. **Two items isn't really a list, three is good though.**
-   - Again please don't nest lists if you want people to actually read your content.
-   - Nobody wants to look at this.
-   - I'm upset that we even have to bother styling this.
+## C1 Level: What You Really Want to Put on Your Resume
 
-The most annoying thing about lists in Markdown is that `<li>` elements aren't given a child `<p>` tag unless there are multiple paragraphs in the list item. That means I have to worry about styling that annoying situation too.
+To demonstrate your proficiency at the C level, you usually have to read and understand something that you would never read for pleasure. This could include topics like environmental problems, hunger in East Timor, or education for bilingual children.
 
-- **For example, here's another nested list.**
+The point is, at C1, you are familiar with vocabulary that goes beyond your personal interests. Even if you don't care about some-obscure-topic you should be able to discuss it and know how to defend your opinions before the knowledgeable public. The same expectations apply to writing. At C1, you should be comfortable with every single aspect of your target language, whether you're using it for personal, academic, or professional purposes.
 
-  But this time with a second paragraph.
+And the fact that German universities seek the C1 level should tell you the same thing.
 
-  - These list items won't have `<p>` tags
-  - Because they are only one line each
+## C2 Language Level: Fluency and Mastery
 
-- **But in this second top-level list item, they will.**
+The CEFR C2 level represents the pinnacle of language proficiency. Perhaps only native speakers can surpass your language skills.
 
-  This is especially annoying because of the spacing on this paragraph.
+You no longer encounter the problem of not understanding something (except for technical terms, perhaps). Your language proficiency allows you to do remarkable things: summarize ideas and construct strong arguments. But more importantly, the language has become a faithful tool that you have completely mastered.
 
-  - As you can see here, because I've added a second line, this list item now has a `<p>` tag.
+With C2, all doors are open, whether you're seeking career opportunities, higher education, or immigration. The challenge is that by the time you achieve C2 level, you usually already have all these incredible benefits.
 
-    This is the second line I'm talking about by the way.
+## How to Get Certified with CEFR?
 
-  - Finally here's another list item so it's more like a list.
+You don't even have to take an exam to get an idea of your language level thanks to the comprehensible CEFR self-assessment tables. However, what if it's time to prove that you actually have C1 proficiency in German, for example?
 
-- A closing list item, but with no nested list, because why not?
+### Why Do You Need to Prove Your Language Proficiency Level?
 
-And finally a sentence to close off this section.
+Proof of your language skills is often required to secure a better job, receive higher-quality education, and improve your overall living situation.
 
-## We didn't forget about description lists
+In the modern world, it's nearly impossible to obtain anything without providing the corresponding paper with an official stamp. This is especially true when trying to establish your status in a new environment. Thus, a language certificate can be a valuable asset.
 
-Well, that's not exactly true, we first released this plugin back in 2020 and it took three years before we added description lists. But they're here now, so let's just be happy about that&hellip;okay? They can be great for things like FAQs.
+However, in many cases, your current language level may differ significantly from the level required for your ultimate goal. For instance, I needed a B2-C1 level in French to take university courses in that language, while I could only claim to have an A2 level. If this is the case, you have no choice but to continue working on your skills until they match one of the required CEFR language levels. Your citizenship application won't be approved if you have a B1 level instead of a B2. That's how the system works.
 
-<dl>
-  <dt>Why do you never see elephants hiding in trees?</dt>
-  <dd>
-    Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-    cupiditate laboriosam fugiat.
-  </dd>
-  <dt>What do you call someone with no body and no nose?</dt>
-  <dd>
-    Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa
-    quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.
-  </dd>
-  <dt>Why can't you hear a pterodactyl go to the bathroom?</dt>
-  <dd>
-    Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam,
-    quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit
-    deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.
-  </dd>
-</dl>
+Similarly, when filling out your resume, you can't simply claim to speak a language at the B2 level based on your own estimations, especially if language proficiency is not just a bonus point but a job requirement. In such cases, you'll want to prove it by demonstrating a widely recognized language certificate.
 
-## There are other elements we need to style
+So... You Have to Take a Test!
 
-I almost forgot to mention links, like [this link to the Tailwind CSS website](https://tailwindcss.com). We almost made them blue but that's so yesterday, so we went with dark gray, feels edgier.
+### Choosing and taking a language test
 
-We even included table styles, check it out:
+The CEFR is not a certification itself; it is merely a framework within which language tests function. Moreover, CEFR is not the only framework, and not all language tests are aligned with it.
 
-| Wrestler                | Origin       | Finisher           |
-| ----------------------- | ------------ | ------------------ |
-| Bret "The Hitman" Hart  | Calgary, AB  | Sharpshooter       |
-| Stone Cold Steve Austin | Austin, TX   | Stone Cold Stunner |
-| Randy Savage            | Sarasota, FL | Elbow Drop         |
-| Vader                   | Boulder, CO  | Vader Bomb         |
-| Razor Ramon             | Chuluota, FL | Razor's Edge       |
+Therefore, the actual certification will vary depending on the test and the language you are taking. For example, you may need to take the DELE exam to prove your Spanish skills or the DEFL/DALF exam to obtain a certificate in French. As a result, you'll receive DELF or DELE diplomas that indicate your language skills at the corresponding level of the Common European Framework of Reference for Languages (CEFR). In general, all TELC, ECL, and Unicert tests work within the CEFR framework.
 
-We also need to make sure inline code looks good, like if I wanted to talk about `<span>` elements or tell you the good news about `@tailwindcss/typography`.
+### What could go wrong?
 
-### Sometimes I even use `code` in headings
+Problems may arise when you take a test, but your institution does not accept the certification you received because they require a different one.
 
-Even though it's probably a bad idea, and historically I've had a hard time making it look good. This _"wrap the code blocks in backticks"_ trick works pretty well though really.
+For example, I took the DELF B2 exam to prove my French language proficiency for college. However, I discovered that they didn't accept DELF and only approved the TFI (Test du Français International) administered by ETS (the major trouble-maker and the author of TOEFL and TOEIC, which are - guess what - not aligned with CEFR). Consequently, I had to take a placement test at the university itself—twice—before finally being permitted to take French courses.
 
-Another thing I've done in the past is put a `code` tag inside of a link, like if I wanted to tell you about the [`tailwindcss/docs`](https://github.com/tailwindcss/docs) repository. I don't love that there is an underline below the backticks but it is absolutely not worth the madness it would require to avoid it.
+The moral of the story: consult your institution to determine which tests and certifications they accept.
 
-#### We haven't used an `h4` yet
+### What else could go wrong?
 
-But now we have. Please don't use `h5` or `h6` in your content, Medium only supports two heading levels for a reason, you animals. I honestly considered using a `before` pseudo-element to scream at you if you use an `h5` or `h6`.
+The second problem with CEFR language levels is that you have to choose which test to take: A2, B1, C1, or any other level. It's easy to overestimate your abilities and fail the test, especially when you're aiming high. Statistics show that more than half of DELF B2 test takers fail.
 
-We don't style them at all out of the box because `h4` elements are already so small that they are the same size as the body copy. What are we supposed to do with an `h5`, make it _smaller_ than the body copy? No thanks.
+If you fail, you won't receive a certificate. This is quite different from various international tests like IELTS, where they simply assign you a level. It may be lower or higher than your ultimate goal, but at least you receive a certificate. With CEFR, they won't even bother.
 
-### We still need to think about stacked headings though.
+The moral of the story: be realistic or better prepared.
 
-#### Let's make sure we don't screw that up with `h4` elements, either.
+## Other Small Problems with CEFR Language Levels
 
-Phew, with any luck we have styled the headings above this text and they look pretty good.
+Despite the initials claiming it to be "_common_" and "_European_", CEFR is still far from being omnipresent and widely accepted.
 
-Let's add a closing paragraph here so things end with a decently sized block of text. I can't explain why I want things to end that way but I have to assume it's because I think things will look weird or unbalanced if there is a heading too close to the end of the document.
+### Some language tests do not fully correspond to CEFR standards.
 
-What I've written here is probably long enough, but adding this final sentence can't hurt.
+For instance, if you take the Polish language test, you'll find that you only have three options: B1, B2, or C2. Other three language levels do exist in the Egzaminy Certyfikatowe z Języka Polskiego jako Obcego, but they don't align with CEFR standards of A1, A2, and C1. As a result, you can certainly take these exams, but your certificate will be outside the common point of reference.
 
-Source: [Tailwind Typography](https://tailwindcss-typography.vercel.app/)
+You may encounter the same problem with some Swedish, Norwegian, and Japanese language tests.
+
+### The Chinese Problem
+
+The situation with the Chinese language is even more complicated. The only standardized language test in China is HSK (_Hànyǔ Shuǐpíng Kǎosh_), which has six proficiency levels, the same as CEFR. However, CEFR has refused to accept the Chinese claim that these levels completely match the CEFR ones. The actual state of affairs is that the highest "C2" level of the HSK exam corresponds to the intermediate B2 CEFR level, which is two levels down the scale.
+
+<img
+  alt="CEFR"
+  src="https://images.squarespace-cdn.com/content/v1/63d35969337ef820d2f43afd/14acb57c-a29e-40d2-a365-75323760fb19/EUROEXAM_CEFR_equivalence-min.jpg"
+  loading="lazy"
+  className="max-w-full"
+/>
+
+The good news is that HSK is widely recognized and accepted in China. It is more likely that you would need to present your test results in China rather than in Europe, so the chances of getting turned down are insignificant.
+
+## Is CEFR the Only Proficiency Scale?
+
+As mentioned earlier, CEFR is not the only language assessment framework, but it is the major one. In most cases, you would have to deal with CEFR and nothing else. Why?
+
+Because in most cases, you would actually be learning European languages.
+
+Just think about it. CEFR language levels cover 7 out of the 10 most widely spoken languages in the world. Only Hindi, Bengali, and Malay have no connection to the Common European Framework whatsoever, and Mandarin is hanging on the border. Otherwise, Spanish, French, German, Russian, Portuguese, Arabic... CEFR has got you covered!
+
+If your target language is not on the list, you'll have two options. Either you deal with a private test assessment scale, _like CU-TFL or the Chulalongkorn University Proficiency Test of Thai as a Foreign Language_, or you take a test assessed by another proficiency scale.
+
+All major test scores can be converted into CEFR language levels and vice versa. Source: Wikimedia Commons
+
+## ILR, ACTFL, and CEFR Language Levels
+
+Yes, there are other broad language assessment scales apart from CEFR:
+
+- ILR
+- ACTFL
+- FLPE
+
+Let's take one of my favorites, ILR (_Interagency Language Roundtable_), for example. As you can guess from the "interagency" part, it's something serious. And it is indeed serious since ILR is a professional assessment scale for those who wish to work for the US government or military agencies.
+
+ILR is regulated by the Foreign Service Institute in the US, and they deal with over a hundred world languages. If you've heard of FSI, it's probably in the context of their famous study on [how many hours you need to learn a language](https://www.thelanguageformula.com/articles/language-learning-trip). In this study, they refer to the "_professional working proficiency_" level as the ultimate goal of language training. And what this vague definition describes is actually level 3 of the ILR scale or C1 level of CEFR.
+
+There are multiple tables aiming to compare CEFR language levels with those of ILR and ACTFL scales. So it's up to you to decide which system to use as a reference for your language skills.
+
+The main point is that knowing your proficiency level allows you to work on your language skills more deliberately. And yes, it also opens many doors!

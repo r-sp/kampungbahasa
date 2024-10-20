@@ -1,6 +1,13 @@
-/** @type {import('tailwindcss').Config} */
-
 import { type Config } from "tailwindcss";
+
+const round = (num: number) => {
+  return num
+    .toFixed(7)
+    .replace(/(\.[0-9]+?)0+$/, "$1")
+    .replace(/\.0$/, "");
+};
+const rem = (px: number) => `${round(px / 16)}rem`;
+const em = (px: number) => `${round(px / 16)}em`;
 
 export default {
   content: [
@@ -11,6 +18,7 @@ export default {
   darkMode: "selector",
   theme: {
     colors: {
+      inherit: "inherit",
       slate: {
         "50": "var(--slate-50)",
         "100": "var(--slate-100)",
@@ -37,18 +45,90 @@ export default {
       },
     },
     screens: {
-      xs: { raw: "(min-width: 32em)" },
-      sm: { raw: "(min-width: 40em)" },
-      md: { raw: "(min-width: 48em)" },
-      lg: { raw: "(min-width: 64em)" },
-      xl: { raw: "(min-width: 80em)" },
-      "2xl": { raw: "(min-width: 96em)" },
-      "max-xs": { raw: "not all and (min-width: 32em)" },
-      "max-sm": { raw: "not all and (min-width: 40em)" },
-      "max-md": { raw: "not all and (min-width: 48em)" },
-      "max-lg": { raw: "not all and (min-width: 64em)" },
-      "max-xl": { raw: "not all and (min-width: 80em)" },
-      "max-2xl": { raw: "not all and (min-width: 96em)" },
+      xs: { raw: `(min-width: ${em(512)})` },
+      sm: { raw: `(min-width: ${em(640)})` },
+      md: { raw: `(min-width: ${em(768)})` },
+      lg: { raw: `(min-width: ${em(1024)})` },
+      xl: { raw: `(min-width: ${em(1280)})` },
+      "2xl": { raw: `(min-width: ${em(1536)})` },
+      "max-xs": { raw: `not all and (min-width: ${em(512)})` },
+      "max-sm": { raw: `not all and (min-width: ${em(640)})` },
+      "max-md": { raw: `not all and (min-width: ${em(768)})` },
+      "max-lg": { raw: `not all and (min-width: ${em(1024)})` },
+      "max-xl": { raw: `not all and (min-width: ${em(1280)})` },
+      "max-2xl": { raw: `not all and (min-width: ${em(1536)})` },
+    },
+    fontSize: {
+      xs: [
+        rem(12),
+        {
+          lineHeight: rem(16),
+          letterSpacing: em(0.768),
+        },
+      ],
+      sm: [
+        rem(14),
+        {
+          lineHeight: rem(20),
+          letterSpacing: em(0.768),
+        },
+      ],
+      base: [
+        rem(16),
+        {
+          lineHeight: rem(24),
+          letterSpacing: em(0.768),
+        },
+      ],
+      lg: [
+        rem(18),
+        {
+          lineHeight: rem(28),
+          letterSpacing: em(0.768),
+        },
+      ],
+      xl: [
+        rem(20),
+        {
+          lineHeight: rem(28),
+          letterSpacing: em(0.2),
+        },
+      ],
+      "2xl": [
+        rem(24),
+        {
+          lineHeight: rem(32),
+          letterSpacing: em(0.2),
+        },
+      ],
+      "3xl": [
+        rem(32),
+        {
+          lineHeight: rem(36),
+          letterSpacing: em(0.2),
+        },
+      ],
+      "4xl": [
+        rem(36),
+        {
+          lineHeight: rem(40),
+          letterSpacing: em(0),
+        },
+      ],
+      "5xl": [
+        rem(48),
+        {
+          lineHeight: "1",
+          letterSpacing: em(0),
+        },
+      ],
+      "6xl": [
+        rem(60),
+        {
+          lineHeight: "1",
+          letterSpacing: em(0),
+        },
+      ],
     },
     extend: {
       fontFamily: {
@@ -58,11 +138,11 @@ export default {
         split: "auto 1fr",
       },
       maxWidth: {
-        "screen-xs": "32em",
-        "screen-sm": "40em",
-        "screen-md": "48em",
-        "screen-lg": "64em",
-        "screen-xl": "80em",
+        "screen-xs": em(512),
+        "screen-sm": em(640),
+        "screen-md": em(768),
+        "screen-lg": em(1024),
+        "screen-xl": em(1280),
       },
     },
   },

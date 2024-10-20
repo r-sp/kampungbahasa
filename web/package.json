@@ -9,6 +9,7 @@
     "lint": "eslint",
     "clean": "rm -rf .next"
   },
+  "browserslist": "defaults, not ie <= 11",
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
