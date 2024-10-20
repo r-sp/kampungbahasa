@@ -320,7 +320,7 @@ td {
   }
   .prose-fiction em {
     font-style: italic;
-    letter-spacing: 0;
+    letter-spacing: 0.0125em;
   }
   .prose-fiction a {
     color: var(--state-700);
