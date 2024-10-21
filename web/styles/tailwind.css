@@ -21,6 +21,7 @@
   --state-700: hsl(210, 96%, 40%);
   --state-800: hsl(210, 96%, 35%);
   --state-900: hsl(210, 96%, 30%);
+  color-scheme: light;
 }
 
 .dark {
@@ -44,6 +45,7 @@
   --state-700: hsl(210, 69%, 60%);
   --state-800: hsl(210, 69%, 50%);
   --state-900: hsl(210, 69%, 45%);
+  color-scheme: dark;
 }
 
 *,
@@ -165,9 +167,7 @@ td {
   .prose-fiction p + h3 {
     margin-top: 3rem;
   }
-  .prose-fiction p + h4,
-  .prose-fiction pre + *,
-  .prose-fiction table + * {
+  .prose-fiction p + h4 {
     margin-top: 2rem;
   }
   .prose-fiction blockquote > p,
@@ -189,9 +189,7 @@ td {
     .prose-fiction p + h3 {
       margin-top: 4rem;
     }
-    .prose-fiction p + h4,
-    .prose-fiction pre + *,
-    .prose-fiction table + * {
+    .prose-fiction p + h4 {
       margin-top: 2.5rem;
     }
     .prose-fiction blockquote > p,

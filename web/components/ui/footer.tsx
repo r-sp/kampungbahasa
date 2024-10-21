@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Banner } from "~/assets/logo";
-import { ThemeSwitcher } from "~/components/client";
+import { ThemeSwitcher } from "~/components/ui";
 
 export default function Footer(props: { children?: React.ReactNode }) {
   return (

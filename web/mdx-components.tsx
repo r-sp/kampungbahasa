@@ -37,22 +37,28 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     strong: ({ children }) => (
       <strong className="font-semibold text-slate-900">{children}</strong>
     ),
+    img: (props) => (
+      <figure>
+        <img className="max-w-full" loading="lazy" {...props} />
+        <figcaption className="mt-2 text-sm font-normal text-slate-600 md:mt-4 md:text-base">
+          {props.alt}
+        </figcaption>
+      </figure>
+    ),
     blockquote: ({ children }) => (
       <blockquote className="my-8 px-6 text-xl font-medium text-slate-800 md:my-12 md:text-2xl">
         {children}
       </blockquote>
     ),
     pre: ({ children }) => (
-      <pre className="my-8 overflow-x-auto whitespace-pre rounded-lg bg-slate-200 px-5 py-4 text-slate-700 md:my-12">
+      <pre className="overflow-x-auto whitespace-pre rounded-lg bg-slate-200 px-5 py-4 text-slate-700">
         {children}
       </pre>
     ),
     code: ({ children }) => (
       <code className="text-sm font-semibold text-inherit">{children}</code>
     ),
-    table: ({ children }) => (
-      <table className="my-8 w-full table-auto md:my-12">{children}</table>
-    ),
+    table: ({ children }) => <table className="w-full table-auto">{children}</table>,
     thead: ({ children }) => (
       <thead className="border-b border-solid border-b-slate-500">{children}</thead>
     ),

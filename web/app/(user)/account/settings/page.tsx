@@ -1,5 +1,5 @@
 import { type Metadata } from "next";
-import { ThemeSwitcher } from "~/components/client";
+import { ThemeSwitcher } from "~/components/ui";
 
 export const metadata: Metadata = {
   title: "Settings",
