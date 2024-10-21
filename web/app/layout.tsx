@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 import { InterTight } from "~/assets/fonts";
-import { ThemeProvider, ThemeScript } from "~/components/client";
+import { ThemeProvider, ThemeScript } from "~/components/ui";
 import "~/styles/tailwind.css";
 
 export const metadata: Metadata = {

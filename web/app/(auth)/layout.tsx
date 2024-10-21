@@ -1,4 +1,4 @@
-import { Header } from "~/components/client";
+import { Header } from "~/components/ui";
 
 export default function AuthLayout(
   props: Readonly<{
