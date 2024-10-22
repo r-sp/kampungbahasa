@@ -1,12 +1,13 @@
 "use client";
 
+import { type ComponentPropsWithoutRef } from "react";
 import clsx from "clsx";
 
 export default function FKB({
   className,
   color,
   ...rest
-}: React.ComponentPropsWithoutRef<"svg"> & {
+}: ComponentPropsWithoutRef<"svg"> & {
   color?: {
     bg: string;
     top: string;

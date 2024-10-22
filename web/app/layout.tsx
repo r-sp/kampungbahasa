@@ -1,3 +1,4 @@
+import { type ReactNode } from "react";
 import { type Metadata } from "next";
 import { InterTight } from "~/assets/fonts";
 import { ThemeProvider, ThemeScript } from "~/components/ui";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout(
   props: Readonly<{
-    children: React.ReactNode;
+    children: ReactNode;
   }>,
 ) {
   return (

@@ -1,12 +1,13 @@
 "use client";
 
+import { type ComponentPropsWithoutRef } from "react";
 import { type IconProps } from "../types";
 
 export default function IconOptions({
   color = "currentColor",
   className,
   ...rest
-}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
+}: IconProps & ComponentPropsWithoutRef<"svg">) {
   const iconCircleRight =
     "M18.8627 8.9C18.4804 10.1171 17.3433 11 16 11C14.6567 11 13.5196 10.1171 13.1374 8.9H2.9C2.40295 8.9 2 8.49706 2 8C2 7.50294 2.40295 7.1 2.9 7.1H13.1374C13.5196 5.88287 14.6567 5 16 5C17.3433 5 18.4804 5.88287 18.8627 7.1H21.1C21.5971 7.1 22 7.50294 22 8C22 8.49706 21.5971 8.9 21.1 8.9H18.8627ZM17.2 8C17.2 8.66274 16.6628 9.2 16 9.2C15.3373 9.2 14.8 8.66274 14.8 8C14.8 7.33726 15.3373 6.8 16 6.8C16.6628 6.8 17.2 7.33726 17.2 8Z";
   const iconCircleLeft =

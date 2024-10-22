@@ -1,14 +1,15 @@
 "use client";
 
-import clsx from "clsx";
+import { type ComponentPropsWithoutRef } from "react";
 import { type IconProps } from "../types";
+import clsx from "clsx";
 
 export default function IconLibrary({
   color = "currentColor",
   outline = true,
   className,
   ...rest
-}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
+}: IconProps & ComponentPropsWithoutRef<"svg">) {
   const iconOutline =
     "M2.40182 19.0634C5.44643 17.4324 9.24344 17.7447 12 20C14.7566 17.7447 18.5536 17.4324 21.5982 19.0634C22.1931 19.3821 23 18.9867 23 18.3118V6.07065C23 5.71699 22.8146 5.38631 22.5011 5.22267C19.2008 3.49998 15.2282 3.59243 12 5.50002C8.77178 3.59243 4.79924 3.49998 1.49887 5.22267C1.18536 5.38631 1 5.71699 1 6.07065V18.3118C1 18.9867 1.8069 19.3821 2.40182 19.0634ZM11.1 7.05897L11.0843 7.04969C8.54464 5.54899 5.45212 5.39606 2.8 6.59093V16.9101C5.48588 15.8978 8.49732 16.0268 11.1 17.2983V7.05897ZM12.9 17.2983C15.5027 16.0268 18.5141 15.8978 21.2 16.9101V6.59093C18.5479 5.39606 15.4554 5.54899 12.9157 7.04969L12.9 7.05897V17.2983Z";
   const iconFill =

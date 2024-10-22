@@ -1,12 +1,13 @@
 "use client";
 
+import { type ComponentPropsWithoutRef } from "react";
 import { type IconProps } from "../types";
 
 export default function IconChevron({
   color = "currentColor",
   className,
   ...rest
-}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
+}: IconProps & ComponentPropsWithoutRef<"svg">) {
   const iconChevronRight =
     "M8.00641 2.0036L18.0025 11.9997L8.00675 22.0061L6.73328 20.7339L15.4576 12.0003L6.73362 3.27639L8.00641 2.0036Z";
 

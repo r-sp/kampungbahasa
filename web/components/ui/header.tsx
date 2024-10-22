@@ -1,10 +1,11 @@
 "use client";
 
+import { type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import clsx from "clsx";
 
-export default function Header(props: { children?: React.ReactNode }) {
+export default function Header(props: { children?: ReactNode }) {
   const currentPath = usePathname();
 
   return (

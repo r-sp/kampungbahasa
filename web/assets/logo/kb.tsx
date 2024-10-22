@@ -1,12 +1,13 @@
 "use client";
 
+import { type ComponentPropsWithoutRef } from "react";
 import clsx from "clsx";
 
 export function Logo({
   className,
   variant = "gradient",
   ...rest
-}: React.ComponentPropsWithoutRef<"svg"> & {
+}: ComponentPropsWithoutRef<"svg"> & {
   variant?: "gradient" | "mono";
 }) {
   return (
