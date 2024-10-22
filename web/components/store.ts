@@ -5,9 +5,9 @@ export type ThemeVariants = {
 };
 
 export type ThemeActions = {
-  useThemeDark: () => void;
-  useThemeLight: () => void;
-  useThemeSystem: () => void;
+  applyThemeDark: () => void;
+  applyThemeLight: () => void;
+  applyThemeSystem: () => void;
 };
 
 export type ThemeStore = ThemeVariants & ThemeActions;
@@ -19,9 +19,9 @@ export const defaultTheme: ThemeVariants = {
 export function createThemeStore(initStore: ThemeVariants = defaultTheme) {
   return createStore<ThemeStore>()((set) => ({
     ...initStore,
-    useThemeDark: () => set(() => ({ themes: "dark" })),
-    useThemeLight: () => set(() => ({ themes: "light" })),
-    useThemeSystem: () => set(() => ({ themes: "system" })),
+    applyThemeDark: () => set(() => ({ themes: "dark" })),
+    applyThemeLight: () => set(() => ({ themes: "light" })),
+    applyThemeSystem: () => set(() => ({ themes: "system" })),
   }));
 }
 

@@ -7,7 +7,7 @@ import { IconThemeContrast, IconThemeDark, IconThemeLight } from "~/assets/icons
 
 export default function ThemeSwitcher() {
   const context = useContext(ThemeContext);
-  const { theme, useTheme } = useThemeProvider(context);
+  const { theme, switchTheme } = useThemeProvider(context);
 
   return (
     <fieldset className="flex gap-1">
@@ -20,7 +20,7 @@ export default function ThemeSwitcher() {
           name="theme"
           type="radio"
           value="system"
-          onChange={() => useTheme("system")}
+          onChange={() => switchTheme("system")}
           className="sr-only"
         />
         <label
@@ -39,7 +39,7 @@ export default function ThemeSwitcher() {
           name="theme"
           type="radio"
           value="light"
-          onChange={() => useTheme("light")}
+          onChange={() => switchTheme("light")}
           className="sr-only"
         />
         <label
@@ -58,7 +58,7 @@ export default function ThemeSwitcher() {
           name="theme"
           type="radio"
           value="dark"
-          onChange={() => useTheme("dark")}
+          onChange={() => switchTheme("dark")}
           className="sr-only"
         />
         <label

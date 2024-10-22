@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 export function useStickyHeader() {
   const [sticky, setSticky] = useState<"top" | "visible" | "hidden">("top");
   let pageScroll = typeof window !== "undefined" ? window.scrollY : 0;
   let useScroll = false;
 
-  const stickyHeader = () => {
+  const updateHeader = () => {
     const currentScroll = window.scrollY;
     if (!useScroll) {
       window.requestAnimationFrame(() => {
@@ -18,12 +18,16 @@ export function useStickyHeader() {
         } else {
           setSticky("hidden");
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         pageScroll = currentScroll;
         useScroll = false;
       });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       useScroll = true;
     }
   };
+
+  const stickyHeader = useCallback(updateHeader, [pageScroll, useScroll]);
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -43,7 +47,7 @@ export function useStickyHeader() {
       preferMotion();
       reduceMotion.addEventListener("change", preferMotion);
     }
-  }, []);
+  }, [stickyHeader]);
 
   return sticky;
 }

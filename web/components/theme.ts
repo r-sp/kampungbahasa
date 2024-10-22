@@ -37,7 +37,7 @@ export function getLocalTheme() {
   return local;
 }
 
-export function useLocalTheme(event: MediaQueryList | MediaQueryListEvent) {
+export function applyLocalTheme(event: MediaQueryList | MediaQueryListEvent) {
   if (event.matches) {
     cleanTheme("light");
     applyTheme("dark");
@@ -48,7 +48,7 @@ export function useLocalTheme(event: MediaQueryList | MediaQueryListEvent) {
 }
 
 export function setLocalTheme(event: MediaQueryListEvent) {
-  if (getLocalTheme() === "system") useLocalTheme(event);
+  if (getLocalTheme() === "system") applyLocalTheme(event);
   return event;
 }
 
@@ -58,13 +58,13 @@ export function useThemeProvider(props: {
 }) {
   const theme = props.theme;
 
-  const { useThemeDark, useThemeLight, useThemeSystem } = useThemeStore((state) => state);
+  const { applyThemeDark, applyThemeLight, applyThemeSystem } = useThemeStore((state) => state);
 
   function setThemeSystem() {
-    if (isClient) useLocalTheme(window.matchMedia("(prefers-color-scheme: dark)"));
+    if (isClient) applyLocalTheme(window.matchMedia("(prefers-color-scheme: dark)"));
     storeTheme("system");
     props.setTheme("system");
-    useThemeSystem();
+    applyThemeSystem();
   }
 
   function setThemeDark() {
@@ -72,7 +72,7 @@ export function useThemeProvider(props: {
     applyTheme("dark");
     storeTheme("dark");
     props.setTheme("dark");
-    useThemeDark();
+    applyThemeDark();
   }
 
   function setThemeLight() {
@@ -80,14 +80,14 @@ export function useThemeProvider(props: {
     applyTheme("light");
     storeTheme("light");
     props.setTheme("light");
-    useThemeLight();
+    applyThemeLight();
   }
 
-  function useTheme(variant: ThemeVariant) {
+  function switchTheme(variant: ThemeVariant) {
     if (variant === "dark") return setThemeDark();
     else if (variant === "light") return setThemeLight();
     else return setThemeSystem();
   }
 
-  return { theme, useTheme };
+  return { theme, switchTheme };
 }
