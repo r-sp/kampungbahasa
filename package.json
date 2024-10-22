@@ -10,8 +10,8 @@
   "scripts": {
     "dev": "turbo watch dev",
     "build": "turbo run build",
-    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
-    "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
+    "format": "turbo run format --cache-dir=.turbo/.cache/.prettiercache",
+    "lint": "turbo run lint --cache-dir=.turbo/.cache/.eslintcache",
     "clean": "turbo run clean --no-cache"
   },
   "devDependencies": {

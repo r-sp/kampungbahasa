@@ -5,6 +5,9 @@ import rehypeUnwrapImages from "rehype-unwrap-images";
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 const withMDX = createMDX({
