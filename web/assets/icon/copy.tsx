@@ -1,12 +1,13 @@
 "use client";
 
+import { type ComponentPropsWithoutRef } from "react";
 import { type IconProps } from "../types";
 
 export default function IconCopy({
   color = "currentColor",
   className,
   ...rest
-}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
+}: IconProps & ComponentPropsWithoutRef<"svg">) {
   const iconMagnetLeft =
     "M6.9 7C4.19381 7 2 9.19381 2 11.9V12.1C2 14.8062 4.1938 17 6.9 17H10.1C10.5971 17 11 16.5971 11 16.1C11 15.6029 10.5971 15.2 10.1 15.2H6.9C5.18792 15.2 3.8 13.8121 3.8 12.1V11.9C3.8 10.1879 5.18792 8.8 6.9 8.8H10.1C10.5971 8.8 11 8.39706 11 7.9C11 7.40294 10.5971 7 10.1 7H6.9Z";
   const iconMagnetRight =

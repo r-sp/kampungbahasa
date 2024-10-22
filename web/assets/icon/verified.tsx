@@ -1,14 +1,15 @@
 "use client";
 
-import clsx from "clsx";
+import { type ComponentPropsWithoutRef } from "react";
 import { type IconProps } from "../types";
+import clsx from "clsx";
 
 export default function IconVerified({
   className,
   linearGradient,
   ...rest
 }: IconProps &
-  React.ComponentPropsWithoutRef<"svg"> & {
+  ComponentPropsWithoutRef<"svg"> & {
     linearGradient?: {
       from: string;
       to: string;

@@ -1,10 +1,11 @@
 "use client";
 
+import { type ReactNode } from "react";
 import Link from "next/link";
 import { Banner } from "~/assets/logo";
 import { ThemeSwitcher } from "~/components/ui";
 
-export default function Footer(props: { children?: React.ReactNode }) {
+export default function Footer(props: { children?: ReactNode }) {
   return (
     <footer>
       <nav className="mx-auto flex h-14 max-w-3xl items-center justify-between px-4 ps-4">

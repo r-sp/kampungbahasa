@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { type ReactNode, useEffect, useState, useMemo } from "react";
 import { ThemeContext } from "~/components/context";
 import { getLocalTheme, setLocalTheme } from "~/components/theme";
 
-export default function ThemeProvider(props: { children: React.ReactNode }) {
+export default function ThemeProvider(props: { children: ReactNode }) {
   const [theme, setTheme] = useState<string | undefined>(undefined);
 
   useEffect(() => {

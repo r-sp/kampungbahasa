@@ -1,14 +1,15 @@
 "use client";
 
-import clsx from "clsx";
+import { type ComponentPropsWithoutRef } from "react";
 import { type IconProps } from "../types";
+import clsx from "clsx";
 
 export default function IconBag({
   color = "currentColor",
   outline = true,
   className,
   ...rest
-}: IconProps & React.ComponentPropsWithoutRef<"svg">) {
+}: IconProps & ComponentPropsWithoutRef<"svg">) {
   const iconOutlineHandle =
     "M12 3.8C10.785 3.8 9.8 4.78497 9.8 6V10.1C9.8 10.5971 9.39706 11 8.9 11C8.40294 11 8 10.5971 8 10.1V6C8 3.79086 9.79086 2 12 2C14.2091 2 16 3.79086 16 6V10.1C16 10.5971 15.5971 11 15.1 11C14.6029 11 14.2 10.5971 14.2 10.1V6C14.2 4.78497 13.215 3.8 12 3.8Z";
   const iconOutlineBag =
