@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useThemeStore } from "./provider";
+
 export type ThemeVariant = "dark" | "light" | "system";
 
 const isClient = typeof window !== "undefined";
@@ -56,10 +58,13 @@ export function useThemeProvider(props: {
 }) {
   const theme = props.theme;
 
+  const { useThemeDark, useThemeLight, useThemeSystem } = useThemeStore((state) => state);
+
   function setThemeSystem() {
     if (isClient) useLocalTheme(window.matchMedia("(prefers-color-scheme: dark)"));
     storeTheme("system");
     props.setTheme("system");
+    useThemeSystem();
   }
 
   function setThemeDark() {
@@ -67,6 +72,7 @@ export function useThemeProvider(props: {
     applyTheme("dark");
     storeTheme("dark");
     props.setTheme("dark");
+    useThemeDark();
   }
 
   function setThemeLight() {
@@ -74,6 +80,7 @@ export function useThemeProvider(props: {
     applyTheme("light");
     storeTheme("light");
     props.setTheme("light");
+    useThemeLight();
   }
 
   function useTheme(variant: ThemeVariant) {
