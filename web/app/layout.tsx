@@ -3,6 +3,8 @@ import { InterTight } from "~/assets/fonts";
 import { ThemeProvider, ThemeScript } from "~/components/ui";
 import "~/styles/tailwind.css";
 
+import { ThemeStoreProvider } from "~/components/provider";
+
 export const metadata: Metadata = {
   title: {
     template: "%s - Kampung Bahasa",
@@ -31,9 +33,11 @@ export default function RootLayout(
       </head>
       <body>
         <ThemeProvider>
-          <div id="root" role="none">
-            {props.children}
-          </div>
+          <ThemeStoreProvider>
+            <div id="root" role="none">
+              {props.children}
+            </div>
+          </ThemeStoreProvider>
         </ThemeProvider>
       </body>
     </html>
