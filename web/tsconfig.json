@@ -22,8 +22,7 @@
     "target": "ES2022",
     "moduleDetection": "force",
     "noUncheckedIndexedAccess": true,
-    "disableSourceOfProjectReferenceRedirect": true,
-    "tsBuildInfoFile": "${configDir}/.cache/tsbuildinfo.json"
+    "disableSourceOfProjectReferenceRedirect": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "eslint.config.mjs", "postcss.config.cjs"]
