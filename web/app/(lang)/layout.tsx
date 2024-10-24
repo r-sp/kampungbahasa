@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Header } from "~/components/ui";
+import { Header, Footer } from "~/components/ui";
 
 export default function CourseLayout(
   props: Readonly<{
@@ -12,9 +12,7 @@ export default function CourseLayout(
       <main className="p-4">
         <article className="mx-auto w-full max-w-screen-lg">{props.children}</article>
       </main>
-      <footer className="p-4">
-        <p className="mx-auto w-full max-w-screen-lg text-slate-500">layout: course</p>
-      </footer>
+      <Footer layout="course" />
     </>
   );
 }
