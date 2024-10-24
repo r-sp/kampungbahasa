@@ -1,5 +1,5 @@
 import { type ReactNode } from "react";
-import { Header } from "~/components/ui";
+import { Header, Footer } from "~/components/ui";
 
 export default function mdxLayout(
   props: Readonly<{
@@ -14,9 +14,7 @@ export default function mdxLayout(
           {props.children}
         </section>
       </main>
-      <footer className="p-4">
-        <p className="mx-auto w-full max-w-screen-lg text-slate-500">layout: mdx</p>
-      </footer>
+      <Footer layout="mdx" />
     </>
   );
 }
