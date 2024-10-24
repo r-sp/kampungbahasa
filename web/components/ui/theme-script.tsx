@@ -3,7 +3,7 @@
 export default function ThemeScript() {
   return (
     <script
-      suppressHydrationWarning
+      suppressHydrationWarning={true}
       dangerouslySetInnerHTML={{
         __html: `(${theme.toString()})()`,
       }}

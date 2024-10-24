@@ -1,13 +1,12 @@
 "use client";
 
-import { useContext } from "react";
-import { ThemeContext } from "~/components/context";
-import { useThemeProvider } from "~/components/theme";
+import { useStoreProvider } from "~/app/provider";
 import { IconThemeContrast, IconThemeDark, IconThemeLight } from "~/assets/icons";
 
 export default function ThemeSwitcher() {
-  const context = useContext(ThemeContext);
-  const { theme, switchTheme } = useThemeProvider(context);
+  const { setThemeDark, setThemeLight, setThemeSystem, theme } = useStoreProvider(
+    (state) => state,
+  );
 
   return (
     <fieldset className="flex gap-1">
@@ -20,7 +19,7 @@ export default function ThemeSwitcher() {
           name="theme"
           type="radio"
           value="system"
-          onChange={() => switchTheme("system")}
+          onChange={() => setThemeSystem()}
           className="sr-only"
         />
         <label
@@ -39,7 +38,7 @@ export default function ThemeSwitcher() {
           name="theme"
           type="radio"
           value="light"
-          onChange={() => switchTheme("light")}
+          onChange={() => setThemeLight()}
           className="sr-only"
         />
         <label
@@ -58,7 +57,7 @@ export default function ThemeSwitcher() {
           name="theme"
           type="radio"
           value="dark"
-          onChange={() => switchTheme("dark")}
+          onChange={() => setThemeDark()}
           className="sr-only"
         />
         <label
