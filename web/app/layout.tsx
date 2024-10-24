@@ -1,10 +1,9 @@
 import { type ReactNode } from "react";
 import { type Metadata } from "next";
 import { InterTight } from "~/assets/fonts";
-import { ThemeProvider, ThemeScript } from "~/components/ui";
-import "~/styles/tailwind.css";
-
-import { ThemeStoreProvider } from "~/components/provider";
+import { ThemeScript } from "~/components/ui";
+import { StoreProvider } from "./provider";
+import "./style.css";
 
 export const metadata: Metadata = {
   title: {
@@ -28,18 +27,16 @@ export default function RootLayout(
   }>,
 ) {
   return (
-    <html lang="en" className={InterTight.variable} suppressHydrationWarning>
+    <html lang="en" className={InterTight.variable} suppressHydrationWarning={true}>
       <head>
         <ThemeScript />
       </head>
       <body>
-        <ThemeProvider>
-          <ThemeStoreProvider>
-            <div id="root" role="none">
-              {props.children}
-            </div>
-          </ThemeStoreProvider>
-        </ThemeProvider>
+        <StoreProvider>
+          <div id="root" role="none">
+            {props.children}
+          </div>
+        </StoreProvider>
       </body>
     </html>
   );
