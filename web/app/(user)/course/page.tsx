@@ -33,7 +33,7 @@ export default function CoursePage() {
     );
   };
   return (
-    <>
+    <article className="mx-auto w-full max-w-screen-lg">
       <h1 className="text-4xl font-bold sm:text-5xl">Course</h1>
       <ul className="mt-4 flex flex-col gap-6 text-base tracking-wide">
         <ItemCourse en="Arabic" id="Arab" />
@@ -53,6 +53,6 @@ export default function CoursePage() {
           </Link>
         </li>
       </ul>
-    </>
+    </article>
   );
 }
