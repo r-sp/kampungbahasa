@@ -8,5 +8,9 @@ export const metadata: Metadata = {
 };
 
 export default function ActivityPage() {
-  return <h1 className="text-4xl font-bold sm:text-5xl">Activity</h1>;
+  return (
+    <article className="mx-auto w-full max-w-screen-lg">
+      <h1 className="text-4xl font-bold sm:text-5xl">Activity</h1>
+    </article>
+  );
 }
