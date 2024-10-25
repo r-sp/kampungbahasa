@@ -9,9 +9,7 @@ export default function ProviderLayout(
   return (
     <>
       <Header />
-      <main className="p-4">
-        <article className="mx-auto w-full max-w-screen-lg">{props.children}</article>
-      </main>
+      <main className="p-4">{props.children}</main>
       <Footer layout="provider" />
     </>
   );
