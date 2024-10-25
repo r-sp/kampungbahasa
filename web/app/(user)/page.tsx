@@ -23,6 +23,33 @@ export default function HomePage() {
         <Link className="text-base font-normal text-slate-700" href="/logout">
           Logout
         </Link>
+        <Link className="text-base font-normal text-slate-700" href="/account/settings">
+          Settings
+        </Link>
+        <Link className="text-base font-normal text-slate-700" href="/dashboard">
+          Dashboard
+        </Link>
+        <Link className="text-base font-normal text-slate-700" href="/about">
+          About
+        </Link>
+        <Link className="text-base font-normal text-slate-700" href="/community">
+          Community
+        </Link>
+        <Link className="text-base font-normal text-slate-700" href="/faq">
+          FAQ
+        </Link>
+        <Link className="text-base font-normal text-slate-700" href="/feedback">
+          Feedback
+        </Link>
+        <Link className="text-base font-normal text-slate-700" href="/legal">
+          Legal
+        </Link>
+        <Link className="text-base font-normal text-slate-700" href="/payments">
+          Payments
+        </Link>
+        <Link className="text-base font-normal text-slate-700" href="/status">
+          Status
+        </Link>
       </nav>
     </article>
   );
