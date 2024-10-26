@@ -32,7 +32,11 @@ export default function RootLayout(
         <ThemeScript />
       </head>
       <body>
-        <StoreProvider>{props.children}</StoreProvider>
+        <StoreProvider>
+          <div id="root" role="none">
+            {props.children}
+          </div>
+        </StoreProvider>
       </body>
     </html>
   );

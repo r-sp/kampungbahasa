@@ -1,20 +1,22 @@
 import { type ReactNode } from "react";
 import { Header, Footer } from "~/components/ui";
 
-export default function mdxLayout(
+export default function MDXLayout(
   props: Readonly<{
     children: ReactNode;
   }>,
 ) {
   return (
-    <div id="root" role="none">
+    <>
       <Header />
-      <main className="p-4">
-        <section className="mx-auto w-full max-w-screen-md break-words">
-          {props.children}
-        </section>
+      <main>
+        <div className="mx-auto w-full max-w-screen-lg px-4 py-8" role="none">
+          <div className="mx-auto w-full max-w-screen-md break-words" role="none">
+            {props.children}
+          </div>
+        </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

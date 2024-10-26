@@ -7,10 +7,10 @@ export default function UserLayout(
   }>,
 ) {
   return (
-    <div id="root" role="none">
+    <>
       <Header />
-      <main className="p-4">{props.children}</main>
+      <main>{props.children}</main>
       <Footer />
-    </div>
+    </>
   );
 }
