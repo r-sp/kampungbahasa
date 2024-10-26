@@ -81,9 +81,9 @@ select {
   text-transform: none;
 }
 button,
-input:where([type="button"]),
-input:where([type="reset"]),
-input:where([type="submit"]) {
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   appearance: button;
   background-color: transparent;
 }
