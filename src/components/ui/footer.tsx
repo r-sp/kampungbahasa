@@ -1,8 +1,10 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Banner } from "../logo";
-import ThemeSwitcher from "./theme-switcher";
+
+const ThemeSwitcher = dynamic(() => import("./theme-switcher"), { ssr: false });
 
 export default function Footer() {
   return (
