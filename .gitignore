@@ -5,21 +5,9 @@ node_modules
 .pnp
 .pnp.js
 
-# testing
-coverage
-docs
-
 # next.js
 .next/
 out/
-next-env.d.ts
-
-# expo
-.expo/
-expo-env.d.ts
-mobile/expo/.gitignore
-mobile/expo/ios
-mobile/expo/android
 
 # production
 build
@@ -35,15 +23,10 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # local env files
-.env
-.env*.local
+.env*
 
 # vercel
 .vercel
 
 # typescript
-dist/
-.cache
-
-# turbo
-.turbo
+*.tsbuildinfo

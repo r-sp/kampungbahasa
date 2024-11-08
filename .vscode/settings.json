@@ -1,4 +1,4 @@
 {
-  "typescript.tsdk": "./web/node_modules/typescript/lib",
+  "typescript.tsdk": "./node_modules/typescript/lib",
   "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]]
 }
