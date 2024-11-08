@@ -2,7 +2,7 @@
 
 const config = {
   arrowParens: "always",
-  printWidth: 96,
+  printWidth: 128,
   singleQuote: false,
   jsxSingleQuote: false,
   semi: true,
